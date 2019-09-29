@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 1088868979}
   - component: {fileID: 1088868978}
   - component: {fileID: 1088868977}
+  - component: {fileID: 1088868981}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -455,8 +456,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 430
-    y: 98
+    x: 564
+    y: 90
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -467,6 +468,7 @@ MonoBehaviour:
   eventHandler: {fileID: 1088868978}
   commandList:
   - {fileID: 1088868977}
+  - {fileID: 1088868981}
 --- !u!4 &1088868980
 Transform:
   m_ObjectHideFlags: 0
@@ -481,6 +483,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1088868981
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088868975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2
+  indentLevel: 0
+  storyText: And now we merge.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &2082877999
 GameObject:
   m_ObjectHideFlags: 1
