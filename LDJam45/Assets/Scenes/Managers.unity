@@ -433,6 +433,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b3d1e94ae17dc44b24ff1ee41692a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RedStatMax: 1
+  BlueStatMax: 1
+  GreenStatMax: 1
+  RedStatCur: 1
+  BlueStatCur: 0
+  GreenStatCur: 0
+  statUpdateEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1073499440
 Transform:
   m_ObjectHideFlags: 0
