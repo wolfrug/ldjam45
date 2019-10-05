@@ -7,9 +7,9 @@ public class PlayerUI : MonoBehaviour {
 
     public static PlayerUI instance;
 
-    public Slider redSlider;
-    public Slider blueSlider;
-    public Slider greenSlider;
+    public StatSlider redSlider;
+    public StatSlider blueSlider;
+    public StatSlider greenSlider;
 
     void Awake () {
         if (instance == null) {

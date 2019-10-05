@@ -18,19 +18,36 @@ public class StatSlider : MonoBehaviour {
         }
         rectTransform = GetComponent<RectTransform> ();
         deltaHeight = rectTransform.sizeDelta.y;
-        GameManager.instance.statUpdateEvent.AddListener(UpdateSelf);
-        UpdateSelf(color);
+        GameManager.instance.statUpdateEvent.AddListener (UpdateSelf);
+        UpdateSelf (color);
+    }
+
+    public float maxValue {
+        get {
+            return slider.maxValue;
+        }
+        set {
+            slider.maxValue = value;
+        }
+    }
+    public float value {
+        get {
+            return slider.value;
+        }
+        set {
+            slider.value = value;
+        }
     }
     void UpdateSelf (InteractableColor updateColor) {
-        Debug.Log("Received update for " + updateColor + " for slider " + color);
+        Debug.Log ("Received update for " + updateColor + " for slider " + color);
         if (color == updateColor) {
-            rectTransform.sizeDelta = new Vector2 (baseSize + GameManager.instance.GetStatMax(color), deltaHeight);
+            rectTransform.sizeDelta = new Vector2 (baseSize + GameManager.instance.GetStatMax (color), deltaHeight);
         }
     }
 
     // Update is called once per frame
     void Update () {
-        if (regenerating){
+        if (regenerating) {
             slider.value += Time.deltaTime * regenSpeed;
         }
     }

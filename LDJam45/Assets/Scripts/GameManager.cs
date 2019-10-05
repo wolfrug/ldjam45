@@ -43,28 +43,34 @@ public class GameManager : MonoBehaviour {
     }
     public float redStat {
         get {
+            RedStatCur = PlayerUI.instance.redSlider.value;
             return RedStatCur;
         }
         set {
             RedStatCur = Mathf.Clamp (value, 0f, RedStatMax);
+            PlayerUI.instance.redSlider.value = RedStatCur;
             statUpdateEvent.Invoke (InteractableColor.RED);
         }
     }
     public float greenStat {
         get {
+            GreenStatCur = PlayerUI.instance.greenSlider.value;
             return GreenStatCur;
         }
         set {
             GreenStatCur = Mathf.Clamp (value, 0f, GreenStatMax);
+            PlayerUI.instance.greenSlider.value = GreenStatCur;
             statUpdateEvent.Invoke (InteractableColor.GREEN);
         }
     }
     public float blueStat {
         get {
+            BlueStatCur = PlayerUI.instance.blueSlider.value;
             return BlueStatCur;
         }
         set {
             BlueStatCur = Mathf.Clamp (value, 0f, BlueStatMax);
+            PlayerUI.instance.blueSlider.value = BlueStatCur;
             statUpdateEvent.Invoke (InteractableColor.BLUE);
         }
     }
@@ -74,19 +80,19 @@ public class GameManager : MonoBehaviour {
 
             case InteractableColor.BLUE:
                 {
-                    BlueStatMax += Mathf.Clamp (amount, 0f, 100f);
+                    BlueStatMax += Mathf.Clamp (amount, 1f, 100f);
                     statUpdateEvent.Invoke (InteractableColor.BLUE);
                     break;
                 }
             case InteractableColor.RED:
                 {
-                    RedStatMax += Mathf.Clamp (amount, 0f, 100f);
+                    RedStatMax += Mathf.Clamp (amount, 1f, 100f);
                     statUpdateEvent.Invoke (InteractableColor.RED);
                     break;
                 }
             case InteractableColor.GREEN:
                 {
-                    GreenStatMax += Mathf.Clamp (amount, 0f, 100f);
+                    GreenStatMax += Mathf.Clamp (amount, 1f, 100f);
                     statUpdateEvent.Invoke (InteractableColor.GREEN);
                     break;
                 }
