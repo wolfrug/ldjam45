@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
     public static GameManager instance;
 
+    private Player playerRef;
+
     void Awake () {
         if (instance == null) {
             instance = this;
@@ -13,13 +15,26 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public Player player {
+        get {
+            if (playerRef == null) {
+                playerRef = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
+            }
+            return playerRef;
+        }
+    }
+
     // Start is called before the first frame update
     void Start () {
-
+        if (MultiSceneLoader.instance != null) {
+            MultiSceneLoader.instance.scenesLoadedEvent.AddListener (GameLoaded);
+        }
     }
 
-    // Update is called once per frame
-    void Update () {
-
+    public void GameLoaded (string[] scenes) {
+        if (scenes.Length > 0) {
+            CameraManager.instance.Init ();
+        };
     }
+
 }

@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
+[System.Serializable]
+public class ScenesLoaded : UnityEvent<string[]> { }
 public class MultiSceneLoader : MonoBehaviour { // Handles the loading of multiple scenes as necessary
 
     public static MultiSceneLoader instance;
@@ -16,6 +19,8 @@ public class MultiSceneLoader : MonoBehaviour { // Handles the loading of multip
     public List<string> currentlyLoadedScenes = new List<string> { };
 
     private Coroutine setOpener;
+
+    public ScenesLoaded scenesLoadedEvent;
 
     // Start is called before the first frame update
     void Awake () { // We want this to be a singleton
@@ -64,6 +69,8 @@ public class MultiSceneLoader : MonoBehaviour { // Handles the loading of multip
         } else {
             Debug.LogWarning ("Cannot load scenes in order as fewer than 2 scenes were provided");
         }
+        // Run the event
+        scenesLoadedEvent.Invoke (scenes);
         setOpener = null;
     }
     public AsyncOperation AddOpenScene (string sceneToAdd) { // Returns an asyncoperation, which can be checked for .isDone to see if the scene is finished loading

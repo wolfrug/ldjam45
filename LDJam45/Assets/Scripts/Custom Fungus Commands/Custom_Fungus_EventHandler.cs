@@ -14,10 +14,10 @@ Fungus.FungusManager.Instance.EventDispatcher.Raise(new Custom_Fungus_EventHandl
 
  */
 
-    public string target;
+    //public string target;
 
     public class Custom_EventHandlerEvent {
-        public string text;
+        //public string text;
     }
 
     protected EventDispatcher eventDispatcher;
@@ -36,10 +36,10 @@ Fungus.FungusManager.Instance.EventDispatcher.Raise(new Custom_Fungus_EventHandl
 
     void OnCustom_EventHandlerEvent(Custom_EventHandlerEvent evt) {
 
-        Debug.Log("Event raised: " + evt.text);
+       /* Debug.Log("Event raised: " + evt.text);
         if (evt.text == target) {
             ExecuteBlock();
             return;
-            };
+            }; */
     }
 }
