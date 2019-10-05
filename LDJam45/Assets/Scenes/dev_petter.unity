@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 203963544}
-  target: Test
+  target: {fileID: 0}
 --- !u!114 &203963538
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -216,8 +216,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 203963544}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 203963545}

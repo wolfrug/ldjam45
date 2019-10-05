@@ -140,7 +140,7 @@ MonoBehaviour:
   animator: {fileID: 8242098505624396823}
   holdDownTimeSeconds: 1
   holdDownTimeCurrent: -1
-  inputButton: Fire1
+  inputButton: Interact
   activateEvent:
     m_PersistentCalls:
       m_Calls:
@@ -214,10 +214,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8242098505624396821}
+  - component: {fileID: 8122544523442728332}
   - component: {fileID: 5091237513280482390}
   - component: {fileID: 8242098505624396822}
   - component: {fileID: 8242098505624396823}
-  - component: {fileID: 8122544523442728332}
   m_Layer: 0
   m_Name: InteractableBase
   m_TagString: Untagged
@@ -242,6 +242,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8122544523442728332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8242098505624396827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc0cbe39602093c4bb0361100d16371b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 2468d9e46670d4c408a6f3848ee70846, type: 2}
 --- !u!114 &5091237513280482390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,19 +330,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8122544523442728332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8242098505624396827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0cbe39602093c4bb0361100d16371b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 2468d9e46670d4c408a6f3848ee70846, type: 2}
 --- !u!1 &8242098505625480789
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +506,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hold down Mouse 1
+  m_Text: Hold down E
 --- !u!1 &8242098507238358669
 GameObject:
   m_ObjectHideFlags: 0
