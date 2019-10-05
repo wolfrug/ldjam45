@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     public SimpleCharacterController controller;
+    public GameObject shield;
     // Start is called before the first frame update
     void Start () {
         if (controller == null) {
             controller = GetComponent<SimpleCharacterController> ();
         }
         GameManager.instance.statUpdateEvent.AddListener (UpdatePlayerAbilities);
+        shield.SetActive (false);
     }
 
     public void UpdatePlayerAbilities (InteractableColor color) {
@@ -58,5 +60,18 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         UpdatePlayerSpeedAndJump ();
+        if (Input.GetAxis ("Vertical") > 0f && GameManager.instance.blueStat > 10f) {
+            if (GameManager.instance.blueStat > 1f) {
+                shield.SetActive (true);
+                PlayerUI.instance.blueSlider.regenerating = false;
+                GameManager.instance.blueStat = GameManager.instance.blueStat - 1f * Time.deltaTime;
+            } else {
+                PlayerUI.instance.blueSlider.regenerating = true;
+                shield.SetActive (false);
+            }
+        } else {
+            PlayerUI.instance.blueSlider.regenerating = true;
+            shield.SetActive (false);
+        }
     }
 }
