@@ -14,10 +14,10 @@ public class AgentInteracted : Custom_Fungus_EventHandler {
 
      */
 
-    public string target;
+    public InteractableData target;
 
     new public class Custom_EventHandlerEvent {
-        public string text;
+        public InteractableData data;
     }
      protected override void OnEnable() {
         eventDispatcher = FungusManager.Instance.EventDispatcher;
@@ -33,8 +33,8 @@ public class AgentInteracted : Custom_Fungus_EventHandler {
 
     void OnCustom_EventHandlerEvent (Custom_EventHandlerEvent evt) {
 
-         Debug.Log("Event raised: " + evt.text);
-         if (evt.text == target) {
+         Debug.Log("Event raised: " + evt.data);
+         if (evt.data == target) {
              ExecuteBlock();
              return;
              };
