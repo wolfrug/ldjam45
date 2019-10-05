@@ -8,6 +8,6 @@ public class Interactable : MonoBehaviour {
 
     public void InteractWith (BasicAgent agent, GenericActivate source) {
         Debug.Log("Interacted with");
-        Fungus.FungusManager.Instance.EventDispatcher.Raise (new AgentInteracted.Agent_EventHandlerEvent () { data = data });
+        FungusManager.Instance.EventDispatcher.Raise (new AgentInteracted.Custom_EventHandlerEvent () {text = "Test" });
     }
 }
