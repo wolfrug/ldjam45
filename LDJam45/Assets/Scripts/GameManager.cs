@@ -140,4 +140,8 @@ public class GameManager : MonoBehaviour {
         };
     }
 
+    public void Restart(){
+        MultiSceneLoader.instance.OpenSceneSet(MultiSceneLoader.instance.startingScenes);
+    }
+
 }
