@@ -393,6 +393,14 @@ GameObject:
   - component: {fileID: 1202871553}
   - component: {fileID: 1202871552}
   - component: {fileID: 1202871392}
+  - component: {fileID: 1202871585}
+  - component: {fileID: 1202871584}
+  - component: {fileID: 1202871583}
+  - component: {fileID: 1202871582}
+  - component: {fileID: 1202871581}
+  - component: {fileID: 1202871580}
+  - component: {fileID: 1202871579}
+  - component: {fileID: 1202871578}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -479,7 +487,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 231.03093
-    y: 68
+    y: 67
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -491,7 +499,9 @@ MonoBehaviour:
   commandList:
   - {fileID: 1202871329}
   - {fileID: 1202871309}
+  - {fileID: 1202871585}
   - {fileID: 1202871333}
+  - {fileID: 1202871584}
   - {fileID: 1202871338}
   - {fileID: 1202871358}
   - {fileID: 1202871306}
@@ -549,7 +559,13 @@ MonoBehaviour:
   blockName: Game intro
   description: I'll handle all of this...
   eventHandler: {fileID: 1202871551}
-  commandList: []
+  commandList:
+  - {fileID: 1202871583}
+  - {fileID: 1202871580}
+  - {fileID: 1202871581}
+  - {fileID: 1202871582}
+  - {fileID: 1202871579}
+  - {fileID: 1202871578}
 --- !u!114 &1202871311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,11 +579,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -349.40143, y: -511.36493}
+  scrollPos: {x: -342.71317, y: -823.82666}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.6189968
+  zoom: 0.9259985
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -966,7 +982,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 228.2697
     y: 212.66312
-    width: 122.69827
+    width: 121.274414
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1080,9 +1096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 65
   indentLevel: 0
-  storyText: There is a portrait of a young woman inside the locket. Is it you? With
-    questing fingertips you feel the planes of your own face, trying to remember,
-    and slowly the memory begins to surface.
+  storyText: 'Inside, there''s a portrait of a smiling young woman. Is it you? '
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1709,8 +1723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 63
   indentLevel: 0
-  storyText: "You remember now, how you chose to come here to this ancient house in
-    her stead\u2026"
+  storyText: "You remember now, how you chose to come here to this place in her stead\u2026"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2645,7 +2658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 636.1206
+    x: 611.8876
     y: 1250.0194
     width: 120
     height: 40
@@ -2672,7 +2685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 759.61865
+    x: 748.3099
     y: 1316.6871
     width: 120
     height: 40
@@ -2699,8 +2712,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 763.9006
-    y: 1247.2415
+    x: 747.7452
+    y: 1245.626
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3598,7 +3611,7 @@ MonoBehaviour:
   itemId: 193
   indentLevel: 0
   storyText: A book lies discarded on the floor, the pages well thumbed, and stained
-    yellow with age.
+    yellow with age. You always did love to read.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -5306,8 +5319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 239
   indentLevel: 0
-  storyText: The candlestick is dark, the flames long since guttered out, but when
-    you lift it up you imagine you can still feel the warmth of that tiny flame.
+  storyText: It's a candlestick, the flames long since guttered out, but when you
+    lift it up you imagine you can still feel the warmth of that tiny flame.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -5595,7 +5608,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 228
   indentLevel: 0
-  storyText: You wore this that night, when you finally decided to follow him.
+  storyText: You wore this that night, when you finally decided to follow him. Using
+    it to blend into the shadows.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -5622,7 +5636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 227
   indentLevel: 0
-  storyText: The cloak lies in a heap at your feet, and you reach down to retrieve
+  storyText: A  cloak lies in a heap at your feet, and you reach down to retrieve
     it, soft folds of cloth bunching beneath your white knuckled grip.
   description: 
   character: {fileID: 0}
@@ -5911,8 +5925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 215
   indentLevel: 0
-  storyText: You find a brooch set with a previous a ruby, the stone as dark, and
-    red as wine - or blood.
+  storyText: A ruby brooch. The precious stone is dark, and red as wine - or blood.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -6148,9 +6161,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 205
   indentLevel: 0
-  storyText: "It\u2019s not the key, no. That key was smaller, and unremarkable. A
-    key for keeping secrets. You clutch at the memory, but it slips between your fingers
-    like moonlight. Very well then, you can be patient."
+  storyText: "It\u2019s not 'the' key, no. That key was smaller, and unremarkable.
+    A key for keeping secrets. You clutch at the memory, but it slips between your
+    fingers like moonlight. Very well then, you can be patient."
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -6177,8 +6190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 204
   indentLevel: 0
-  storyText: "The key you\u2019re holding is heavy and ornate. The metal is cold against
-    your skin."
+  storyText: You find a ornate old key. it is large, and strangely heavy. The metal
+    feels cold against your skin.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -6304,8 +6317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 252
   indentLevel: 0
-  storyText: The dagger is stuck tip first in the wooden floor, You have to pry it
-    loose, and in the process you manage to slice your finger.
+  storyText: The dagger lodged deeeply in wooden floor, You have to pry it loose,
+    and in the process you manage to slice your finger.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -6418,7 +6431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 286
   indentLevel: 0
-  storyText: But death comes for us all, and you are no exception.
+  storyText: 'But death comes for us all, and you are no exception. '
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -6704,7 +6717,7 @@ MonoBehaviour:
   showAlways: 1
   showCount: 1
   extendPrevious: 0
-  fadeWhenDone: 1
+  fadeWhenDone: 0
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
@@ -6751,8 +6764,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 270
   indentLevel: 0
-  storyText: "You hadn\u2019t heard him come into the room. The Count is as swift,
-    and silent as death, and just as unforgiving."
+  storyText: "You hadn\u2019t heard his arrival, or his telltale footsteps on the
+    stairs. The Count is as swift, and silent as death, and just as unforgiving. "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -6779,8 +6792,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 269
   indentLevel: 0
-  storyText: "\u201CEvelyn.\u201D The Count says behind you, his voice soft with the
-    promise of violence."
+  storyText: "\u201CEvelyn. I believe you have something of mine.\u201D The Count
+    says behind you, his voice soft with the promise of violence."
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -6879,7 +6892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1157.3627
+    x: 1156.2827
     y: 1159.2032
     width: 120
     height: 40
@@ -7011,6 +7024,227 @@ MonoBehaviour:
   commandList:
   - {fileID: 1202871561}
   - {fileID: 1202871560}
+--- !u!114 &1202871578
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 296
+  indentLevel: 0
+  storyText: ' Not even your own name.'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871579
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 295
+  indentLevel: 0
+  storyText: You remember nothing.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871580
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 294
+  indentLevel: 0
+  storyText: 'For a moment you can still feel the fingers digging into your neck,
+    but the thought vanishes as quickly as it arrived. No one is choking you. You
+    are alone, and in unfamiliar surroundings.
+
+'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871581
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 293
+  indentLevel: 0
+  storyText: 'What happened to you? '
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871582
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 292
+  indentLevel: 0
+  storyText: What is this place, and how did you come to be here?
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871583
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 291
+  indentLevel: 0
+  storyText: You wake up gasping, lungs burning for air.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871584
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 290
+  indentLevel: 0
+  storyText: With questing fingertips you feel the planes of your own face, trying
+    to remember, and slowly the memory begins to surface.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871585
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 289
+  indentLevel: 0
+  storyText: It's a locket.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &1877696425
 GameObject:
   m_ObjectHideFlags: 0
