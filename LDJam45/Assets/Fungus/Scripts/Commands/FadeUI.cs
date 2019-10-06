@@ -129,7 +129,7 @@ namespace Fungus
                 }
             }
 
-#if UNITY_2018_1_OR_NEWER
+#if UNITY_2019_1_OR_NEWER
             var tmpros = go.GetComponentsInChildren<TMPro.TMP_Text>();
             for (int i = 0; i < tmpros.Length; i++)
             {
