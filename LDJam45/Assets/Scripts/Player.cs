@@ -40,7 +40,7 @@ public class Player : MonoBehaviour {
     }
 
     public void SetPlayerSpeed (float newSpeed) {
-        controller.speed = Mathf.Clamp (newSpeed, 1f, 5f);
+        controller.speed = Mathf.Clamp (newSpeed, 1.5f, 5f);
     }
     public void SetPlayerJumpHeight (float newHeight) {
         controller.jumpSpeed = Mathf.Clamp (newHeight, 0f, 20f);

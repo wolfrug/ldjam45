@@ -41,7 +41,7 @@ public class StatSlider : MonoBehaviour {
     void UpdateSelf (InteractableColor updateColor) {
         //Debug.Log ("Received update for " + updateColor + " for slider " + color);
         if (color == updateColor) {
-            rectTransform.sizeDelta = new Vector2 (baseSize + GameManager.instance.GetStatMax (color), deltaHeight);
+            //rectTransform.sizeDelta = new Vector2 (baseSize + GameManager.instance.GetStatMax (color), deltaHeight);
         }
     }
 
