@@ -24,6 +24,7 @@ public class Player : MonoBehaviour {
         shield.SetActive (false);
         attack.SetActive (false);
         levitate.SetActive (false);
+        UpdatePlayerAbilities(InteractableColor.NONE);
     }
 
     public void UpdatePlayerAbilities (InteractableColor color) {
@@ -69,15 +70,18 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public void PlayerHit (GameObject hit) {
+    public void PlayerHit (GameObject hit, EnemyDebris hitter) {
         if (hit == gameObject && !shieldOn) {
-            GameManager.instance.redStat = GameManager.instance.redStat - 5f;
+            GameManager.instance.redStat = GameManager.instance.redStat - hitter.damage;
             if (GameManager.instance.redStat <= 0f) {
-                floatAnimator.SetTrigger("Kill");
-                GameManager.instance.PauseGame(true);
-                GameManager.instance.DelayedAction (3f, new System.Action (() => GameManager.instance.Restart ()));
+                KillPlayer ();
             }
         };
+    }
+    public void KillPlayer () {
+        floatAnimator.SetTrigger ("Kill");
+        GameManager.instance.PauseGame (true);
+        GameManager.instance.DelayedAction (3f, new System.Action (() => GameManager.instance.Restart ()));
     }
 
     // Update is called once per frame
@@ -150,8 +154,14 @@ public class Player : MonoBehaviour {
         } else {
             sprite.flipX = false;
         }
-        if (shieldOn || attackCharging || floatOn){
+        if (shieldOn || attackCharging || floatOn) {
 
         }
+        Debug.Log("Transform position y:" + transform.position.y);
+        // Zone of death
+        if (transform.position.y < -50f) {
+            KillPlayer ();
+        }
     }
+
 }

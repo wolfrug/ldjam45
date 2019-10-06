@@ -145,7 +145,7 @@ MonoBehaviour:
   startingScenes:
   - Managers
   - mainGameScene
-  - dev_petter
+  - master-narrative
   currentlyLoadedScenes: []
   scenesLoadedEvent:
     m_PersistentCalls:

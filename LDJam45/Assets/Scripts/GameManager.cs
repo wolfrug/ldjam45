@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour {
 
     public void PauseGame (bool pause) {
         paused = pause;
-        player.controller.active = !pause;
+        player.controller.EnableControl(!pause);
     }
 
     // Start is called before the first frame update
