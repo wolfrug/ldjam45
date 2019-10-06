@@ -31,8 +31,8 @@ public class Player : MonoBehaviour {
 
         UpdatePlayerSpeedAndJump ();
         SetRegenSpeed (InteractableColor.GREEN, GameManager.instance.GreenStatMax / 5f);
-        SetRegenSpeed (InteractableColor.RED, GameManager.instance.RedStatMax / 10f);
-        SetRegenSpeed (InteractableColor.BLUE, GameManager.instance.BlueStatMax / 30f);
+        SetRegenSpeed (InteractableColor.RED, GameManager.instance.RedStatMax / 5f);
+        SetRegenSpeed (InteractableColor.BLUE, GameManager.instance.BlueStatMax / 5f);
     }
     void UpdatePlayerSpeedAndJump () {
         SetPlayerSpeed (GameManager.instance.GreenStatMax / 10f);
@@ -40,10 +40,10 @@ public class Player : MonoBehaviour {
     }
 
     public void SetPlayerSpeed (float newSpeed) {
-        controller.speed = Mathf.Clamp (newSpeed, 1.5f, 5f);
+        controller.speed = Mathf.Clamp (newSpeed, 3f, 5f);
     }
     public void SetPlayerJumpHeight (float newHeight) {
-        controller.jumpSpeed = Mathf.Clamp (newHeight, 0f, 20f);
+        controller.jumpSpeed = Mathf.Clamp (newHeight, 8f, 20f);
     }
     public void SetRegenSpeed (InteractableColor type, float newRegen) {
         switch (type) {
