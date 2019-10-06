@@ -31,7 +31,7 @@ public class Player : MonoBehaviour {
 
         UpdatePlayerSpeedAndJump ();
         SetRegenSpeed (InteractableColor.GREEN, GameManager.instance.GreenStatMax / 5f);
-        SetRegenSpeed (InteractableColor.RED, GameManager.instance.RedStatMax / 30f);
+        SetRegenSpeed (InteractableColor.RED, GameManager.instance.RedStatMax / 10f);
         SetRegenSpeed (InteractableColor.BLUE, GameManager.instance.BlueStatMax / 30f);
     }
     void UpdatePlayerSpeedAndJump () {

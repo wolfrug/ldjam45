@@ -5,50 +5,47 @@ using UnityEngine.UI;
 
 public class StatSlider : MonoBehaviour {
     public InteractableColor color;
-    public Slider slider;
+    public Image currentMax;
+    public Image currentValue;
     public float baseSize = 10;
     public float regenSpeed = 1f;
     public bool regenerating = true;
-    private RectTransform rectTransform;
-    private float deltaHeight;
     // Start is called before the first frame update
     void Start () {
-        if (slider == null) {
-            slider = GetComponent<Slider> ();
-        }
-        rectTransform = GetComponent<RectTransform> ();
-        deltaHeight = rectTransform.sizeDelta.y;
         GameManager.instance.statUpdateEvent.AddListener (UpdateSelf);
         UpdateSelf (color);
     }
 
     public float maxValue {
         get {
-            return slider.maxValue;
+            return currentMax.fillAmount * 100f;
         }
         set {
-            slider.maxValue = value;
+            currentMax.fillAmount = value / 100f;
         }
     }
     public float value {
         get {
-            return slider.value;
+            return currentValue.fillAmount * 100f;
         }
         set {
-            slider.value = value;
+            currentValue.fillAmount = value / 100f;
         }
     }
     void UpdateSelf (InteractableColor updateColor) {
         //Debug.Log ("Received update for " + updateColor + " for slider " + color);
         if (color == updateColor) {
-            //rectTransform.sizeDelta = new Vector2 (baseSize + GameManager.instance.GetStatMax (color), deltaHeight);
+            maxValue = GameManager.instance.GetStatMax (color);
+            Mathf.Clamp (value, 0f, maxValue);
         }
     }
 
     // Update is called once per frame
     void Update () {
         if (regenerating) {
-            slider.value += Time.deltaTime * regenSpeed;
+            if (currentValue.fillAmount < currentMax.fillAmount) {
+                Mathf.Clamp (value += Time.deltaTime * regenSpeed, 0f, maxValue);
+            }
         }
     }
 }
