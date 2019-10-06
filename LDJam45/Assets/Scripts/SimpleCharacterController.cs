@@ -23,6 +23,7 @@ public class SimpleCharacterController : MonoBehaviour {
 
     public void EnableControl (bool enable) {
         active = enable;
+        rb.isKinematic = !enable;
         Debug.Log ("Enable Control: " + enabled);
     }
 
@@ -50,6 +51,6 @@ public class SimpleCharacterController : MonoBehaviour {
 
             // Move the controller
             controller.Move (moveDirection * Time.deltaTime);
-        };
+        }
     }
 }

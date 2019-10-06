@@ -191,7 +191,7 @@ ParticleSystem:
   serializedVersion: 6
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4935,7 +4935,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5420887956105237514}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 2.2829, z: -4.1598}
   m_LocalScale: {x: 0.92421937, y: 0.9357031, z: 1}
   m_Children:
@@ -4943,7 +4943,7 @@ Transform:
   - {fileID: 7079899217962423540}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!212 &5420887956105237527
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5067,6 +5067,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ps: {fileID: 5420887955675576161}
   force: 50
+  damage: 5
+  allowPooling: 1
   debrisHitEvent:
     m_PersistentCalls:
       m_Calls: []
