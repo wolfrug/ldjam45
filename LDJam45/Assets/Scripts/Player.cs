@@ -24,6 +24,7 @@ public class Player : MonoBehaviour {
         shield.SetActive (false);
         attack.SetActive (false);
         levitate.SetActive (false);
+        UpdatePlayerAbilities(InteractableColor.NONE);
     }
 
     public void UpdatePlayerAbilities (InteractableColor color) {
