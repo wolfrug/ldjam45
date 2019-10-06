@@ -13,23 +13,27 @@ public class EnemyDebris : MonoBehaviour {
     public DebrisHit debrisHitEvent;
     // Start is called before the first frame update
     void Start () {
-        rb = GetComponent<Rigidbody>();
-        debrisHitEvent.AddListener(GameManager.instance.player.PlayerHit);
+        rb = GetComponent<Rigidbody> ();
+        debrisHitEvent.AddListener (GameManager.instance.player.PlayerHit);
     }
 
     public void Hit (GameObject hitTarget) {
-        Debug.Log("Hit!");
-        debrisHitEvent.Invoke(hitTarget);
-        DestroyDebris();
+        Debug.Log ("Hit!");
+        debrisHitEvent.Invoke (hitTarget);
+        DestroyDebris ();
         //GameManager.instance.Restart ();
     }
     public void DestroyDebris () {
         ps.transform.parent = null;
-        ps.SetActive(true);
-        gameObject.SetActive(false);
+        ps.SetActive (true);
+        gameObject.SetActive (false);
     }
 
-    void Update(){
-        rb.AddForce(transform.right * force);
+    void Update () {
+        if (!GameManager.instance.paused) {
+            rb.AddForce (transform.right * force);
+        } else {
+            rb.velocity = Vector3.zero;
+        };
     }
 }

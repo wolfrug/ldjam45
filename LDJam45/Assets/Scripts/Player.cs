@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
     public GameObject shield;
     public GameObject attack;
     public GameObject levitate;
+    public Animator floatAnimator;
     public bool shieldOn = false;
     public bool attackCharging = false;
     public bool floatOn = false;
@@ -72,7 +73,9 @@ public class Player : MonoBehaviour {
         if (hit == gameObject && !shieldOn) {
             GameManager.instance.redStat = GameManager.instance.redStat - 5f;
             if (GameManager.instance.redStat <= 0f) {
-                GameManager.instance.Restart ();
+                floatAnimator.SetTrigger("Kill");
+                GameManager.instance.PauseGame(true);
+                GameManager.instance.DelayedAction (3f, new System.Action (() => GameManager.instance.Restart ()));
             }
         };
     }
@@ -112,10 +115,12 @@ public class Player : MonoBehaviour {
             if (shieldOn) {
                 PlayerUI.instance.blueSlider.regenerating = true;
                 shield.SetActive (false);
+                shieldOn = false;
             };
             if (attackCharging) {
                 PlayerUI.instance.redSlider.regenerating = true;
                 attack.SetActive (false);
+                attackCharging = false;
             }
         }
         if (Input.GetAxis ("Jump") > 0f) { // float time!
@@ -144,6 +149,9 @@ public class Player : MonoBehaviour {
             sprite.flipX = true;
         } else {
             sprite.flipX = false;
+        }
+        if (shieldOn || attackCharging || floatOn){
+
         }
     }
 }

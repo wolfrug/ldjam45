@@ -18,7 +18,9 @@ public class Command_AddStat : Command {
 
     public override void OnEnter () {
 
-        GameManager.instance.AddStat (stat, amount);
+        if (GameManager.instance != null) {
+            GameManager.instance.AddStat (stat, amount);
+        };
         Continue ();
 
     }

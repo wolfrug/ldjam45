@@ -9,6 +9,7 @@ public class StatsUpdated : UnityEvent<InteractableColor> { }
 public class GameManager : MonoBehaviour {
     public static GameManager instance;
 
+    public bool paused = false;
     private Player playerRef;
 
     [SerializeField]
@@ -127,6 +128,11 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public void PauseGame (bool pause) {
+        paused = pause;
+        player.controller.active = !pause;
+    }
+
     // Start is called before the first frame update
     void Start () {
         if (MultiSceneLoader.instance != null) {
@@ -139,9 +145,16 @@ public class GameManager : MonoBehaviour {
             CameraManager.instance.Init ();
         };
     }
+    public void DelayedAction(float delay, System.Action callBack){
+        StartCoroutine(ActionWaiter(delay, callBack));
+    }
+    IEnumerator ActionWaiter (float timeToWait, System.Action callBack) { // Usage: StartCoroutine (ActionWaiter (waitTime, new System.Action (() => RunTutorial (tutorialName))));
+        yield return new WaitForSeconds (timeToWait);
+        callBack.Invoke ();
+    }
 
-    public void Restart(){
-        MultiSceneLoader.instance.OpenSceneSet(MultiSceneLoader.instance.startingScenes);
+    public void Restart () {
+        MultiSceneLoader.instance.OpenSceneSet (MultiSceneLoader.instance.startingScenes);
     }
 
 }
