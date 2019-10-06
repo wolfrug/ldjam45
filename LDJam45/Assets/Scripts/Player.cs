@@ -157,7 +157,7 @@ public class Player : MonoBehaviour {
         if (shieldOn || attackCharging || floatOn) {
 
         }
-        Debug.Log("Transform position y:" + transform.position.y);
+        //Debug.Log("Transform position y:" + transform.position.y);
         // Zone of death
         if (transform.position.y < -50f) {
             KillPlayer ();
