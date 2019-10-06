@@ -195,7 +195,6 @@ GameObject:
   - component: {fileID: 1202871395}
   - component: {fileID: 1202871394}
   - component: {fileID: 1202871393}
-  - component: {fileID: 1202871392}
   - component: {fileID: 1202871391}
   - component: {fileID: 1202871390}
   - component: {fileID: 1202871389}
@@ -537,11 +536,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -5.7461615, y: 229.37276}
+  scrollPos: {x: 345.82446, y: -39.259285}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.6649965
+  zoom: 0.3929941
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -730,7 +729,7 @@ MonoBehaviour:
   showAlways: 1
   showCount: 1
   extendPrevious: 0
-  fadeWhenDone: 0
+  fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
@@ -940,7 +939,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 228.2697
     y: 212.66312
-    width: 121.42895
+    width: 121.24789
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1627,10 +1626,9 @@ MonoBehaviour:
   - {fileID: 1202871395}
   - {fileID: 1202871394}
   - {fileID: 1202871393}
-  - {fileID: 1202871392}
+  - {fileID: 1202871386}
   - {fileID: 1202871391}
   - {fileID: 1202871385}
-  - {fileID: 1202871386}
   - {fileID: 1202871387}
   - {fileID: 1202871390}
   - {fileID: 1202871389}
@@ -2285,7 +2283,7 @@ MonoBehaviour:
   showAlways: 1
   showCount: 1
   extendPrevious: 0
-  fadeWhenDone: 1
+  fadeWhenDone: 0
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
@@ -2389,7 +2387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 83
   indentLevel: 0
-  text: You surreptitiously brushed away a tear.
+  text: You brushed away a tear.
   description: 
   targetBlock: {fileID: 1202871373}
   hideIfVisited: 0
@@ -2414,7 +2412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 82
   indentLevel: 0
-  text: You took one last long look, then turned away.
+  text: You turned away.
   description: 
   targetBlock: {fileID: 1202871313}
   hideIfVisited: 0
@@ -2439,7 +2437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 81
   indentLevel: 0
-  text: You put on a brave face, and waved goodbye.
+  text: You smiled, and waved goodbye.
   description: 
   targetBlock: {fileID: 1202871332}
   hideIfVisited: 0
@@ -2466,34 +2464,6 @@ MonoBehaviour:
   indentLevel: 0
   storyText: You were still clutching tightly to the stem when you first stepped up
     into the lacquered black carriage the Count had sent to collect you.
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 0
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1202871392
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202871304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 79
-  indentLevel: 0
-  storyText: 'Your father, yourself, and your six sisters gathered in the entrance
-    hall to welcome the Count into your family home. '
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -4493,7 +4463,7 @@ MonoBehaviour:
   showAlways: 1
   showCount: 1
   extendPrevious: 0
-  fadeWhenDone: 1
+  fadeWhenDone: 0
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
@@ -4539,7 +4509,7 @@ MonoBehaviour:
   showAlways: 1
   showCount: 1
   extendPrevious: 0
-  fadeWhenDone: 1
+  fadeWhenDone: 0
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
@@ -4629,7 +4599,7 @@ MonoBehaviour:
   showAlways: 1
   showCount: 1
   extendPrevious: 0
-  fadeWhenDone: 1
+  fadeWhenDone: 0
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
@@ -5679,7 +5649,7 @@ MonoBehaviour:
   showAlways: 1
   showCount: 1
   extendPrevious: 0
-  fadeWhenDone: 1
+  fadeWhenDone: 0
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
@@ -5967,7 +5937,7 @@ MonoBehaviour:
   showAlways: 1
   showCount: 1
   extendPrevious: 0
-  fadeWhenDone: 1
+  fadeWhenDone: 0
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
@@ -5998,7 +5968,7 @@ MonoBehaviour:
   showAlways: 1
   showCount: 1
   extendPrevious: 0
-  fadeWhenDone: 1
+  fadeWhenDone: 0
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
