@@ -352,14 +352,21 @@ GameObject:
   - component: {fileID: 1202871510}
   - component: {fileID: 1202871509}
   - component: {fileID: 1202871508}
+  - component: {fileID: 1202871502}
+  - component: {fileID: 1202871501}
+  - component: {fileID: 1202871500}
+  - component: {fileID: 1202871550}
+  - component: {fileID: 1202871549}
+  - component: {fileID: 1202871548}
+  - component: {fileID: 1202871547}
+  - component: {fileID: 1202871546}
+  - component: {fileID: 1202871545}
   - component: {fileID: 1202871507}
   - component: {fileID: 1202871506}
   - component: {fileID: 1202871505}
   - component: {fileID: 1202871504}
   - component: {fileID: 1202871503}
-  - component: {fileID: 1202871502}
-  - component: {fileID: 1202871501}
-  - component: {fileID: 1202871500}
+  - component: {fileID: 1202871551}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -515,7 +522,7 @@ MonoBehaviour:
   itemId: 0
   blockName: Game intro
   description: I'll handle all of this...
-  eventHandler: {fileID: 0}
+  eventHandler: {fileID: 1202871551}
   commandList: []
 --- !u!114 &1202871311
 MonoBehaviour:
@@ -530,11 +537,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -429.9371, y: -546.3767}
+  scrollPos: {x: -5.7461615, y: 229.37276}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.6039958
+  zoom: 0.6649965
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -933,7 +940,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 228.2697
     y: 212.66312
-    width: 120
+    width: 121.42895
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1263,7 +1270,17 @@ MonoBehaviour:
   blockName: Item 10
   description: Dagger
   eventHandler: {fileID: 1202871340}
-  commandList: []
+  commandList:
+  - {fileID: 1202871549}
+  - {fileID: 1202871548}
+  - {fileID: 1202871547}
+  - {fileID: 1202871546}
+  - {fileID: 1202871504}
+  - {fileID: 1202871505}
+  - {fileID: 1202871503}
+  - {fileID: 1202871545}
+  - {fileID: 1202871507}
+  - {fileID: 1202871506}
 --- !u!114 &1202871342
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1293,7 +1310,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 748.17096
-    y: 886.6088
+    y: 889.9201
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1307,11 +1324,6 @@ MonoBehaviour:
   - {fileID: 1202871510}
   - {fileID: 1202871509}
   - {fileID: 1202871508}
-  - {fileID: 1202871507}
-  - {fileID: 1202871506}
-  - {fileID: 1202871505}
-  - {fileID: 1202871504}
-  - {fileID: 1202871503}
   - {fileID: 1202871502}
   - {fileID: 1202871501}
   - {fileID: 1202871500}
@@ -2636,7 +2648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 761.12244
+    x: 759.61865
     y: 1316.6871
     width: 120
     height: 40
@@ -2942,6 +2954,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1202871484}
+  - {fileID: 1202871550}
   - {fileID: 1202871483}
 --- !u!114 &1202871410
 MonoBehaviour:
@@ -4606,7 +4619,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 141
   indentLevel: 0
-  storyText: 
+  storyText: As soon as night fell, and the house had emptied of servants, you made
+    your way to the office, sprung the hidden mechanism, and slid the little key into
+    its latch.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -4650,7 +4665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 139
   indentLevel: 0
-  storyText: 
+  storyText: While you slept upstairs each night unknowing, your husband did this.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -5000,9 +5015,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 249
   indentLevel: 0
-  text: excused yourself for the evening
+  text: anticipation, for what lay ahead.
   description: 
-  targetBlock: {fileID: 1202871337}
+  targetBlock: {fileID: 1202871415}
   hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
@@ -5025,9 +5040,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 248
   indentLevel: 0
-  text: "couldn\u2019t help but feel afraid."
+  text: regret for what might have been.
   description: 
-  targetBlock: {fileID: 1202871323}
+  targetBlock: {fileID: 1202871414}
   hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
@@ -5050,9 +5065,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 247
   indentLevel: 0
-  text: "just hoped that you\u2019d made the right decision."
+  text: somewhat guilty about your deceit.
   description: 
-  targetBlock: {fileID: 1202871424}
+  targetBlock: {fileID: 1202871408}
   hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
@@ -5073,9 +5088,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 246
+  itemId: 260
   indentLevel: 0
-  storyText: Soon you would know his secret. You...
+  storyText: "Bodies line the wall, suspended from chains. They are all women, or
+    they were, once. Whatever he has done to them doesn\u2019t bear mentioning. There
+    is blood everywhere. The floor is saturated with it, stained from years of hard
+    use. "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -5100,10 +5118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 245
+  itemId: 259
   indentLevel: 0
-  storyText: You quickly made your way back upstairs, before he could return and notice
-    your presence.
+  storyText: The scent of iron. The scent of blood.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -5128,10 +5145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 244
+  itemId: 258
   indentLevel: 0
-  storyText: On squeaky hinges, the door swung open, and the Count vanished down into
-    the darkness below.
+  storyText: "Whatever you had been prepared to find behind that door. It wasn\u2019t
+    this. Never this."
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -5153,24 +5170,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202871304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 243
+  itemId: 257
   indentLevel: 0
-  storyText: The count drew forth a delicate key from his pocket, and turned the lock.
+  text: You bite back your horror, and make yourself look at what he has done.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 0
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  targetBlock: {fileID: 1202871399}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!114 &1202871507
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5180,26 +5195,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202871304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 242
+  itemId: 256
   indentLevel: 0
-  storyText: You flitted from doorway to doorway, silent as a ghost as you followed
-    him into his office. He pressed something beneath the desk, and part of the bookshelf
-    sprang forward to reveal a hidden door.
+  text: You cover your eyes, trying to unsee the horrors before you.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 0
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  targetBlock: {fileID: 1202871397}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!114 &1202871508
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5214,10 +5225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 241
   indentLevel: 0
-  storyText: "You\u2019d grown accustomed to his comings and goings, and so when you
-    heard the clatter of the carriage outside just after midnight, you were ready.
-    You waited in the shadows at the back of the stairs, and followed the Count as
-    he made his way down the hall, his mystery burden slung across one shoulder. "
+  storyText: "He was too surprised by your uncharacteristic show of affection to notice
+    the theft, and as the carriage faded from view you couldn\u2019t help but feel...."
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -5244,7 +5253,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 240
   indentLevel: 0
-  storyText: You wore this that night, when you finally decided to follow him.
+  storyText: "You didn\u2019t have to wait long for him to be called away on another
+    business trip. You stood on tiptoes to kiss him goodbye, lifting the key from
+    his coat pocket with one hand as you did so. "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -5271,8 +5282,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 239
   indentLevel: 0
-  storyText: The cloak lies in a heap at your feet, and you reach down to retrieve
-    it, soft folds of cloth bunching beneath your white knuckled grip.
+  storyText: The candlestick is dark, the flames long since guttered out, but when
+    you lift it up you imagine you can still feel the warmth of that tiny flame.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -6173,6 +6184,175 @@ MonoBehaviour:
   pause:
     booleanRef: {fileID: 0}
     booleanVal: 1
+--- !u!114 &1202871545
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 255
+  indentLevel: 0
+  text: You try to swallow the terror that threatens to claw its way out of your throat.
+  description: 
+  targetBlock: {fileID: 1202871400}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1202871546
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 254
+  indentLevel: 0
+  storyText: You let the dagger drop from nerveless fingers, and suddenly you can
+    smell it, so strong you can almost taste it, cloying as it gathers the back of
+    your throat.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871547
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 253
+  indentLevel: 0
+  storyText: "It\u2019s a small cut, nothing to worry about really. A droplet of blood
+    beads upon your fingertip, builds, then splashes to the floor."
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871548
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 252
+  indentLevel: 0
+  storyText: The dagger is stuck tip first in the wooden floor, You have to pry it
+    loose, and in the process you manage to slice your finger.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871549
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ddb2783c368e94b85e3427b416a549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 251
+  indentLevel: 0
+  pause:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &1202871550
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 250
+  indentLevel: 0
+  storyText: The door swung open before you, and without hesitation you stepped forward
+    to meet whatever lay beyond.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871551
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1202871310}
+  waitForFrames: 1
 --- !u!1 &1877696425
 GameObject:
   m_ObjectHideFlags: 0
