@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     public SimpleCharacterController controller;
+    public SpriteRenderer sprite;
     public GameObject shield;
+    public GameObject attack;
+    public GameObject levitate;
+    public Animator floatAnimator;
+    public bool shieldOn = false;
+    public bool attackCharging = false;
+    public bool floatOn = false;
+    public bool shieldCooldown = false;
+    public bool attackCooldDown = false;
+    public bool floatCoolDown = false;
     // Start is called before the first frame update
     void Start () {
         if (controller == null) {
@@ -12,6 +22,8 @@ public class Player : MonoBehaviour {
         }
         GameManager.instance.statUpdateEvent.AddListener (UpdatePlayerAbilities);
         shield.SetActive (false);
+        attack.SetActive (false);
+        levitate.SetActive (false);
     }
 
     public void UpdatePlayerAbilities (InteractableColor color) {
@@ -22,8 +34,8 @@ public class Player : MonoBehaviour {
         SetRegenSpeed (InteractableColor.BLUE, GameManager.instance.BlueStatMax / 30f);
     }
     void UpdatePlayerSpeedAndJump () {
-        SetPlayerSpeed (GameManager.instance.greenStat / 10f);
-        SetPlayerJumpHeight (GameManager.instance.greenStat / 5f);
+        SetPlayerSpeed (GameManager.instance.GreenStatMax / 10f);
+        SetPlayerJumpHeight (GameManager.instance.GreenStatMax / 5f);
     }
 
     public void SetPlayerSpeed (float newSpeed) {
@@ -57,21 +69,89 @@ public class Player : MonoBehaviour {
         }
     }
 
+    public void PlayerHit (GameObject hit) {
+        if (hit == gameObject && !shieldOn) {
+            GameManager.instance.redStat = GameManager.instance.redStat - 5f;
+            if (GameManager.instance.redStat <= 0f) {
+                floatAnimator.SetTrigger("Kill");
+                GameManager.instance.PauseGame(true);
+                GameManager.instance.DelayedAction (3f, new System.Action (() => GameManager.instance.Restart ()));
+            }
+        };
+    }
+
     // Update is called once per frame
     void Update () {
-        UpdatePlayerSpeedAndJump ();
-        if (Input.GetAxis ("Vertical") > 0f && GameManager.instance.blueStat > 10f) {
-            if (GameManager.instance.blueStat > 1f) {
+        //UpdatePlayerSpeedAndJump ();
+        if (Input.GetAxis ("Vertical") > 0f) { // arrow up - shield
+            if (GameManager.instance.blueStat > 1f && !shieldCooldown) {
+                shieldOn = true;
                 shield.SetActive (true);
                 PlayerUI.instance.blueSlider.regenerating = false;
-                GameManager.instance.blueStat = GameManager.instance.blueStat - 1f * Time.deltaTime;
+                GameManager.instance.blueStat = GameManager.instance.blueStat - 5f * Time.deltaTime;
+            } else if (shieldCooldown && GameManager.instance.blueStat > 10f) {
+                shieldCooldown = false;
             } else {
                 PlayerUI.instance.blueSlider.regenerating = true;
                 shield.SetActive (false);
+                shieldOn = false;
+                shieldCooldown = true;
+            }
+        } else if (Input.GetAxis ("Vertical") < 0f) { // arrow down - attack
+            if (GameManager.instance.redStat > 1f && !attackCooldDown) {
+                attackCharging = true;
+                attack.SetActive (true);
+                PlayerUI.instance.redSlider.regenerating = false;
+                GameManager.instance.redStat = GameManager.instance.redStat - 5f * Time.deltaTime;
+            } else if (attackCooldDown && GameManager.instance.redStat > 10f) {
+                attackCooldDown = false;
+            } else {
+                PlayerUI.instance.redSlider.regenerating = true;
+                attack.SetActive (false);
+                attackCharging = false;
+                attackCooldDown = true;
             }
         } else {
-            PlayerUI.instance.blueSlider.regenerating = true;
-            shield.SetActive (false);
+            if (shieldOn) {
+                PlayerUI.instance.blueSlider.regenerating = true;
+                shield.SetActive (false);
+                shieldOn = false;
+            };
+            if (attackCharging) {
+                PlayerUI.instance.redSlider.regenerating = true;
+                attack.SetActive (false);
+                attackCharging = false;
+            }
+        }
+        if (Input.GetAxis ("Jump") > 0f) { // float time!
+            if (GameManager.instance.greenStat > 1f && !floatCoolDown) {
+                floatOn = true;
+                levitate.SetActive (true);
+                controller.gravity = -1f * Time.deltaTime;
+                PlayerUI.instance.greenSlider.regenerating = false;
+                GameManager.instance.greenStat = GameManager.instance.greenStat - 5f * Time.deltaTime;
+            } else if (floatCoolDown && GameManager.instance.greenStat > 10f) {
+                floatCoolDown = false;
+            } else {
+                PlayerUI.instance.greenSlider.regenerating = true;
+                controller.gravity = controller.defaultGravity;
+                floatOn = false;
+                levitate.SetActive (false);
+                floatCoolDown = true;
+            }
+        } else if (floatOn) {
+            controller.gravity = controller.defaultGravity;
+            floatOn = false;
+            levitate.SetActive (false);
+            PlayerUI.instance.greenSlider.regenerating = true;
+        }
+        if (Input.GetAxis ("Horizontal") > 0f && !attackCharging) {
+            sprite.flipX = true;
+        } else {
+            sprite.flipX = false;
+        }
+        if (shieldOn || attackCharging || floatOn){
+
         }
     }
 }
