@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour {
     public List<SimpleEnemyAI> allEnemies = new List<SimpleEnemyAI> ();
     public Vector3 lastItem = Vector3.zero;
     public bool InBossScene = false;
+    public CustomAudioSource audioSource;
+    public AudioClip gainStatSound;
     private Coroutine playerKilledCR;
 
     void Awake () {
@@ -121,6 +123,8 @@ public class GameManager : MonoBehaviour {
                 }
         }
         PlayerUI.instance.UpdateSliders ();
+        audioSource.SetClip(gainStatSound, false);
+        audioSource.Play();
     }
     public float GetStatMax (InteractableColor type) {
         switch (type) {

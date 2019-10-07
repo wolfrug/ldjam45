@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class Shooting : UnityEvent<DebrisShooter> { }
 
 public enum Direction {
     TRANSFORM_FORWARD = 1000,
@@ -20,8 +24,9 @@ public class DebrisShooter : MonoBehaviour {
     public Vector2 force = new Vector2 (50f, 150f);
     [Tooltip ("Min/max damage caused by hit")]
     public Vector2 damage = new Vector2 (5f, 5f);
-
     public Direction direction = Direction.TRANSFORM_FORWARD;
+
+    public Shooting shootingEvent;
 
     // Start is called before the first frame update
     /*void Start () {
@@ -34,6 +39,9 @@ public class DebrisShooter : MonoBehaviour {
             yield return new WaitUntil (() => !GameManager.instance.paused);
             // wait for frequency
             yield return new WaitForSeconds (Random.Range (frequency.x, frequency.y));
+            // Cheating
+            shootingEvent.Invoke(this);
+            yield return new WaitForSeconds(0.45f);
             // spawn
             GameObject debris = Instantiate (debrisPrefabs[Random.Range (0, debrisPrefabs.Length)], transform);
             debris.transform.position = transform.position;
@@ -45,6 +53,7 @@ public class DebrisShooter : MonoBehaviour {
             if (component.allowPooling && !debrisInStorage.Contains (component)) {
                 component.debrisHitEvent.AddListener (AddToStorage);
             };
+            
         }
     }
 

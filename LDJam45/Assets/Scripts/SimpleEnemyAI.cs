@@ -25,7 +25,7 @@ public class SimpleEnemyAI : MonoBehaviour {
     private int currentWp = 0;
     private Vector3 moveDirection_ = Vector3.forward;
     private Coroutine animationCR;
-
+    public CustomAudioSource audiousource;
     public EnemyKilled enemyKilledEvent;
     private bool forcedActive = false;
 
@@ -113,6 +113,7 @@ public class SimpleEnemyAI : MonoBehaviour {
         if (!animator.GetBool ("dead")) {
             health = health - damage * Time.deltaTime;
             animator.SetTrigger ("hit");
+            audiousource.Play();
             if (health <= 0f) {
                 Kill (0.1f);
             }

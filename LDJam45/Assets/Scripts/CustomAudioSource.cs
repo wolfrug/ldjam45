@@ -34,6 +34,17 @@ public class CustomAudioSource : MonoBehaviour { // Add this to all objects need
         RandomizeSound ();
         Play ();
     }
+    public void PausePlay (bool pause) {
+        if (pause) {
+            source.Pause ();
+        } else {
+            source.UnPause ();
+        }
+    }
+    public void SetClip (AudioClip clip, bool loop) {
+        source.clip = clip;
+        source.loop = loop;
+    }
     public void Play () {
         if (source.clip == null) {
             Debug.LogWarning ("No clip found!", source);

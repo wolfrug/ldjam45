@@ -16,6 +16,12 @@ public class Player : MonoBehaviour {
     public bool shieldCooldown = false;
     public bool attackCooldDown = false;
     public bool floatCoolDown = false;
+
+    public CustomAudioSource audioSource_fly;
+    public CustomAudioSource audioSource_attack;
+    public CustomAudioSource audioSource_shield;
+    public CustomAudioSource audioSource_self;
+
     // Start is called before the first frame update
     void Start () {
         if (controller == null) {
@@ -26,6 +32,9 @@ public class Player : MonoBehaviour {
         attack.SetActive (false);
         levitate.SetActive (false);
         UpdatePlayerAbilities (InteractableColor.NONE);
+        audioSource_attack.PausePlay(true);
+        audioSource_fly.PausePlay(true);
+        audioSource_shield.PausePlay(true);
     }
 
     public void UpdatePlayerAbilities (InteractableColor color) {
@@ -73,7 +82,7 @@ public class Player : MonoBehaviour {
 
     public void PlayerHit (float damage) {
         if (!shieldOn) {
-            playerAnimator.SetTrigger("Hit");
+            playerAnimator.SetTrigger ("Hit");
             GameManager.instance.redStat = GameManager.instance.redStat - damage;
             if (GameManager.instance.redStat <= 0f) {
                 KillPlayer ();
@@ -82,11 +91,13 @@ public class Player : MonoBehaviour {
     }
     public void PlayerHit (GameObject hit, EnemyDebris hitter) {
         if (hit == gameObject) {
-            PlayerHit(hitter.damage);
+            audioSource_self.Play();
+            PlayerHit (hitter.damage);
         };
     }
     public void KillPlayer () {
         floatAnimator.SetTrigger ("Kill");
+        playerAnimator.SetTrigger("Die");
         GameManager.instance.PauseGame (true);
         GameManager.instance.DelayedAction (3f, new System.Action (() => GameManager.instance.PlayerKilled ()));
         enabled = false;
@@ -101,6 +112,7 @@ public class Player : MonoBehaviour {
                 shield.SetActive (true);
                 PlayerUI.instance.blueSlider.regenerating = false;
                 GameManager.instance.blueStat = GameManager.instance.blueStat - 5f * Time.deltaTime;
+                audioSource_shield.PausePlay(false);
             } else if (shieldCooldown && GameManager.instance.blueStat > 10f) {
                 shieldCooldown = false;
             } else {
@@ -108,6 +120,7 @@ public class Player : MonoBehaviour {
                 shield.SetActive (false);
                 shieldOn = false;
                 shieldCooldown = true;
+                audioSource_shield.PausePlay(true);
             }
         } else if (Input.GetAxis ("Vertical") < 0f) { // arrow down - attack
             if (GameManager.instance.redStat > 1f && !attackCooldDown) {
@@ -115,6 +128,7 @@ public class Player : MonoBehaviour {
                 attack.SetActive (true);
                 PlayerUI.instance.redSlider.regenerating = false;
                 GameManager.instance.redStat = GameManager.instance.redStat - 5f * Time.deltaTime;
+                audioSource_attack.PausePlay(false);
             } else if (attackCooldDown && GameManager.instance.redStat > 10f) {
                 attackCooldDown = false;
             } else {
@@ -122,17 +136,20 @@ public class Player : MonoBehaviour {
                 attack.SetActive (false);
                 attackCharging = false;
                 attackCooldDown = true;
+                audioSource_attack.PausePlay(true);
             }
         } else {
             if (shieldOn) {
                 PlayerUI.instance.blueSlider.regenerating = true;
                 shield.SetActive (false);
                 shieldOn = false;
+                audioSource_shield.PausePlay(true);
             };
             if (attackCharging) {
                 PlayerUI.instance.redSlider.regenerating = true;
                 attack.SetActive (false);
                 attackCharging = false;
+                audioSource_attack.PausePlay(true);
             }
         }
         if (Input.GetAxis ("Jump") > 0f) { // float time!
@@ -142,6 +159,7 @@ public class Player : MonoBehaviour {
                 controller.gravity = -1f * Time.deltaTime;
                 PlayerUI.instance.greenSlider.regenerating = false;
                 GameManager.instance.greenStat = GameManager.instance.greenStat - 5f * Time.deltaTime;
+                audioSource_fly.PausePlay(false);
             } else if (floatCoolDown && GameManager.instance.greenStat > 10f) {
                 floatCoolDown = false;
             } else {
@@ -150,12 +168,14 @@ public class Player : MonoBehaviour {
                 floatOn = false;
                 levitate.SetActive (false);
                 floatCoolDown = true;
+                audioSource_fly.PausePlay(true);
             }
         } else if (floatOn) {
             controller.gravity = controller.defaultGravity;
             floatOn = false;
             levitate.SetActive (false);
             PlayerUI.instance.greenSlider.regenerating = true;
+            audioSource_fly.PausePlay(true);
         }
         if (Input.GetAxis ("Horizontal") > 0f && !attackCharging) {
             sprite.flipX = true;
