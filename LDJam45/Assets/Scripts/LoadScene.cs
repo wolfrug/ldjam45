@@ -7,5 +7,8 @@ public class LoadScene : MonoBehaviour {
     public void Load (string sceneName) {
         SceneManager.LoadScene (sceneName);
     }
+    public void RestartGame(){
+        MultiSceneLoader.instance.OpenStartingScenes();
+    }
 
 }

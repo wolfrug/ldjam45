@@ -11111,6 +11111,9 @@ MonoBehaviour:
   force: {x: 50, y: 50}
   damage: {x: 10, y: 10}
   direction: 2000
+  shootingEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &993201090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24440,6 +24443,9 @@ MonoBehaviour:
   force: {x: 50, y: 50}
   damage: {x: 10, y: 10}
   direction: 2000
+  shootingEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1673971211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34654,7 +34660,7 @@ PrefabInstance:
     - target: {fileID: 835126972740614739, guid: e5c9ca420e8056a43bd38db60e5ce2ff,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.03
+      value: -203.72
       objectReference: {fileID: 0}
     - target: {fileID: 835126972740614739, guid: e5c9ca420e8056a43bd38db60e5ce2ff,
         type: 3}
@@ -35158,6 +35164,9 @@ MonoBehaviour:
   force: {x: 50, y: 50}
   damage: {x: 10, y: 10}
   direction: 2000
+  shootingEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &5420887955070089560
 Transform:
   m_ObjectHideFlags: 0
