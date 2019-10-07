@@ -779,7 +779,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1202871341}
   selectedCommands:
-  - {fileID: 1202871548}
+  - {fileID: 1202871545}
   variables:
   - {fileID: 1202871689}
   - {fileID: 1202871637}
@@ -5411,7 +5411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 257
   indentLevel: 0
-  text: You bite back your horror, and make yourself look at what he has done.
+  text: You make yourself look at what he has done.
   description: 
   targetBlock: {fileID: 1202871399}
   hideIfVisited: 0
@@ -5436,7 +5436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 256
   indentLevel: 0
-  text: You cover your eyes, trying to unsee the horrors before you.
+  text: You look away from the horrors before you.
   description: 
   targetBlock: {fileID: 1202871397}
   hideIfVisited: 0
@@ -6431,7 +6431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 255
   indentLevel: 0
-  text: You try to swallow the terror that threatens to claw its way out of your throat.
+  text: You try to swallow your terror.
   description: 
   targetBlock: {fileID: 1202871400}
   hideIfVisited: 0
