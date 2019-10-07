@@ -757,7 +757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -338.88867, y: -865.8074}
+  scrollPos: {x: 235.66144, y: 344.98953}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -768,8 +768,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1202871310}
+  selectedCommands:
+  - {fileID: 1202871582}
   variables:
   - {fileID: 1202871689}
   - {fileID: 1202871637}
@@ -7102,9 +7104,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 294
   indentLevel: 0
-  storyText: "For a moment you think can feel fingers digging into your neck, burrowing
-    their way into your flesh. But the feeling passes. \n\nYou are here - wherever
-    here is, and there is no one else in sight."
+  storyText: 'Just a moment ago you were trying to get away from... someone, or something?
+    Or were you?
+
+
+    You clutch at the memory, but it slips between your fingers like moonlight.'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -7185,7 +7189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 291
   indentLevel: 0
-  storyText: You wake up gasping, your lungs starved of air.
+  storyText: You wake up, your heart pounding with fear.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
