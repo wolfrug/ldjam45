@@ -5672,6 +5672,7 @@ GameObject:
   - component: {fileID: 736964102}
   - component: {fileID: 736964101}
   - component: {fileID: 736964100}
+  - component: {fileID: 736964086}
   m_Layer: 0
   m_Name: BossRoomFlowchart
   m_TagString: Untagged
@@ -5679,6 +5680,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &736964086
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736964085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  indentLevel: 0
+  musicClip: {fileID: 8300000, guid: c0b58c3acfccb8842b0cac7060b3fc2a, type: 3}
+  atTime: 0
+  loop: 1
+  fadeDuration: 1
 --- !u!114 &736964093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5787,6 +5806,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 736964101}
   commandList:
+  - {fileID: 736964086}
   - {fileID: 736964100}
 --- !u!1001 &808713959
 PrefabInstance:
