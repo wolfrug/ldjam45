@@ -184,7 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  musicClip: {fileID: 8300000, guid: 02731c48591d1f54c9cc86e040604778, type: 3}
+  musicClip: {fileID: 8300000, guid: f9ee213c1f752714c9e3e6e08de173f5, type: 3}
   atTime: 0
   loop: 1
   fadeDuration: 1
@@ -919,7 +919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 159161461}
+  selectedFlowchart: {fileID: 0}
 --- !u!4 &1761248369
 Transform:
   m_ObjectHideFlags: 1

@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     public GameObject attack;
     public GameObject levitate;
     public Animator floatAnimator;
+    public Animator playerAnimator;
     public bool shieldOn = false;
     public bool attackCharging = false;
     public bool floatOn = false;
@@ -24,7 +25,7 @@ public class Player : MonoBehaviour {
         shield.SetActive (false);
         attack.SetActive (false);
         levitate.SetActive (false);
-        UpdatePlayerAbilities(InteractableColor.NONE);
+        UpdatePlayerAbilities (InteractableColor.NONE);
     }
 
     public void UpdatePlayerAbilities (InteractableColor color) {
@@ -70,18 +71,25 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public void PlayerHit (GameObject hit, EnemyDebris hitter) {
-        if (hit == gameObject && !shieldOn) {
-            GameManager.instance.redStat = GameManager.instance.redStat - hitter.damage;
+    public void PlayerHit (float damage) {
+        if (!shieldOn) {
+            playerAnimator.SetTrigger("Hit");
+            GameManager.instance.redStat = GameManager.instance.redStat - damage;
             if (GameManager.instance.redStat <= 0f) {
                 KillPlayer ();
             }
+        }
+    }
+    public void PlayerHit (GameObject hit, EnemyDebris hitter) {
+        if (hit == gameObject) {
+            PlayerHit(hitter.damage);
         };
     }
     public void KillPlayer () {
         floatAnimator.SetTrigger ("Kill");
         GameManager.instance.PauseGame (true);
-        GameManager.instance.DelayedAction (3f, new System.Action (() => GameManager.instance.Restart ()));
+        GameManager.instance.DelayedAction (3f, new System.Action (() => GameManager.instance.PlayerKilled ()));
+        enabled = false;
     }
 
     // Update is called once per frame
@@ -162,8 +170,8 @@ public class Player : MonoBehaviour {
         if (transform.position.y < -50f) {
             KillPlayer ();
         }
-        if (transform.position.x > 0f || transform.position.x < 0f){ // To prevent moving in X
-            transform.position = new Vector3(0f, transform.position.y, transform.position.z);
+        if (transform.position.x > 0f || transform.position.x < 0f) { // To prevent moving in X
+            transform.position = new Vector3 (0f, transform.position.y, transform.position.z);
         }
     }
 

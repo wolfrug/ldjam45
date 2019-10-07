@@ -501,6 +501,7 @@ GameObject:
   - component: {fileID: 1202871621}
   - component: {fileID: 1202871387}
   - component: {fileID: 1202871624}
+  - component: {fileID: 1202871626}
   - component: {fileID: 1202871625}
   m_Layer: 0
   m_Name: Flowchart
@@ -671,6 +672,7 @@ MonoBehaviour:
   - {fileID: 1202871579}
   - {fileID: 1202871578}
   - {fileID: 1202871624}
+  - {fileID: 1202871626}
   - {fileID: 1202871622}
 --- !u!114 &1202871311
 MonoBehaviour:
@@ -685,7 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -135.21758, y: -1027.9675}
+  scrollPos: {x: 20.158455, y: -1021.9874}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -7014,8 +7016,8 @@ MonoBehaviour:
   - {fileID: 1202871392}
   - {fileID: 1202871552}
   - {fileID: 1202871553}
-  - {fileID: 1202871625}
   - {fileID: 1202871554}
+  - {fileID: 1202871625}
 --- !u!114 &1202871574
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8454,15 +8456,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202871304}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443c1ab2b500b374b847cf5563af130e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 344
+  indentLevel: 0
+  typeOfFinish: 0
+--- !u!114 &1202871626
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43743931d28f43f89eced820d907351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 342
+  itemId: 343
   indentLevel: 0
   messageTarget: 1
   _message:
     stringRef: {fileID: 0}
-    stringVal: StoryFinished
+    stringVal: IntroFinished
   messageOLD: 
 --- !u!1 &1385252257
 GameObject:

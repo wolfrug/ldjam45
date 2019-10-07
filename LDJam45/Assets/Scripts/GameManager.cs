@@ -26,11 +26,28 @@ public class GameManager : MonoBehaviour {
     private float GreenStatCur = 0f;
     public StatsUpdated statUpdateEvent;
 
+    public List<InteractableData> finishedItems = new List<InteractableData> ();
+    public List<SimpleEnemyAI> allEnemies = new List<SimpleEnemyAI> ();
+    public Vector3 lastItem = Vector3.zero;
+    public bool InBossScene = false;
+    private Coroutine playerKilledCR;
+
     void Awake () {
         if (instance == null) {
             instance = this;
         } else {
             Destroy (this);
+        }
+    }
+    // Start is called before the first frame update
+    void Start () {
+        if (MultiSceneLoader.instance != null) {
+            MultiSceneLoader.instance.scenesLoadedEvent.AddListener (GameLoaded);
+        } else {
+            GameLoaded (new string[] { "", "" });
+        }
+        foreach (SimpleEnemyAI enemy in FindObjectsOfType<SimpleEnemyAI> ()) {
+            allEnemies.Add (enemy);
         }
     }
 
@@ -130,14 +147,7 @@ public class GameManager : MonoBehaviour {
 
     public void PauseGame (bool pause) {
         paused = pause;
-        player.controller.EnableControl(!pause);
-    }
-
-    // Start is called before the first frame update
-    void Start () {
-        if (MultiSceneLoader.instance != null) {
-            MultiSceneLoader.instance.scenesLoadedEvent.AddListener (GameLoaded);
-        }
+        player.controller.EnableControl (!pause);
     }
 
     public void GameLoaded (string[] scenes) {
@@ -145,14 +155,49 @@ public class GameManager : MonoBehaviour {
             CameraManager.instance.Init ();
         };
     }
-    public void DelayedAction(float delay, System.Action callBack){
-        StartCoroutine(ActionWaiter(delay, callBack));
+    public void DelayedAction (float delay, System.Action callBack) {
+        StartCoroutine (ActionWaiter (delay, callBack));
     }
     IEnumerator ActionWaiter (float timeToWait, System.Action callBack) { // Usage: StartCoroutine (ActionWaiter (waitTime, new System.Action (() => RunTutorial (tutorialName))));
         yield return new WaitForSeconds (timeToWait);
         callBack.Invoke ();
     }
 
+    public void PlayerKilled () { // only reload main scene
+        if (playerKilledCR == null) {
+            playerKilledCR = StartCoroutine (ReloadGamePlayScene ());
+        };
+    }
+    IEnumerator ReloadGamePlayScene () {
+        playerRef = null;
+        if (!InBossScene) {
+            yield return StartCoroutine (MultiSceneLoader.instance.ReloadOpenScene ("mainGameScene"));
+            if (lastItem != Vector3.zero) {
+
+                player.transform.position = new Vector3 (0f, 0f, lastItem.z);
+            };
+        } else {
+            yield return StartCoroutine (MultiSceneLoader.instance.ReloadOpenScene ("bossFight"));
+            Debug.Log ("Hmm");
+        }
+        PauseGame (false);
+        CameraManager.instance.Init ();
+        playerKilledCR = null;
+    }
+    IEnumerator LoadBossSceneAsync () {
+        yield return MultiSceneLoader.instance.UnloadOpenScene ("mainGameScene");
+        yield return MultiSceneLoader.instance.AddOpenScene ("bossFight");
+        playerRef = null;
+        CameraManager.instance.Init();
+    }
+    public void LoadBossScene () {
+        InBossScene = true;
+        StartCoroutine (LoadBossSceneAsync ());
+
+    }
+    public void LoadEndScene () {
+        MultiSceneLoader.instance.LoadSceneExclusive ("endGame");
+    }
     public void Restart () {
         MultiSceneLoader.instance.OpenSceneSet (MultiSceneLoader.instance.startingScenes);
     }

@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Direction {
+    TRANSFORM_FORWARD = 1000,
+    TRANSFORM_RIGHT = 2000,
+    TRANSFORM_LEFT = 3000,
+    TRANSFORM_BACK = 4000,
+    TRANSFORM_DOWN = 5000,
+    TRANSFORM_UP = 6000
+}
+
 public class DebrisShooter : MonoBehaviour {
     public GameObject[] debrisPrefabs;
     public List<EnemyDebris> debrisInStorage;
@@ -12,10 +21,12 @@ public class DebrisShooter : MonoBehaviour {
     [Tooltip ("Min/max damage caused by hit")]
     public Vector2 damage = new Vector2 (5f, 5f);
 
+    public Direction direction = Direction.TRANSFORM_FORWARD;
+
     // Start is called before the first frame update
-    void Start () {
-        StartCoroutine(Shooter());
-    }
+    /*void Start () {
+        StartCoroutine (Shooter ());
+    } */
 
     IEnumerator Shooter () {
         while (enabled) {
@@ -26,9 +37,11 @@ public class DebrisShooter : MonoBehaviour {
             // spawn
             GameObject debris = Instantiate (debrisPrefabs[Random.Range (0, debrisPrefabs.Length)], transform);
             debris.transform.position = transform.position;
+            debris.transform.SetParent (null);
             EnemyDebris component = debris.GetComponent<EnemyDebris> ();
             component.force = Random.Range (force.x, force.y);
             component.damage = Random.Range (damage.x, damage.y);
+            component.direction = direction;
             if (component.allowPooling && !debrisInStorage.Contains (component)) {
                 component.debrisHitEvent.AddListener (AddToStorage);
             };
@@ -36,13 +49,16 @@ public class DebrisShooter : MonoBehaviour {
     }
 
     void AddToStorage (GameObject hit, EnemyDebris debris) {
-        debris.debrisHitEvent.RemoveListener(AddToStorage);
+        debris.debrisHitEvent.RemoveListener (AddToStorage);
         GameManager.instance.DelayedAction (2f, new System.Action (delegate { debris.ResetDebris (); debrisInStorage.Add (debris); }));
     }
     void AddDebris (EnemyDebris debris) {
         if (!debrisInStorage.Contains (debris)) {
             debrisInStorage.Add (debris);
         }
+    }
+    void OnEnable () {
+        StartCoroutine (Shooter ());
     }
 
     // Update is called once per frame
