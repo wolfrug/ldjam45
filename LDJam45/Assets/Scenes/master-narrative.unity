@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -112,6 +112,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1173179861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1173179863}
+  - component: {fileID: 1173179862}
+  m_Layer: 0
+  m_Name: EveryItemCharacter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1173179862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173179861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: E.K
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: 64bb2b350b3721e4db8a4120d59107fa, type: 3}
+  - {fileID: 21300000, guid: 60dc8cb43b4bfb443b687c50d775b30f, type: 3}
+  - {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
+  - {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
+  - {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
+  - {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
+  - {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
+  - {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
+  - {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
+  - {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
+  - {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+--- !u!4 &1173179863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173179861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1202871304
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +496,12 @@ GameObject:
   - component: {fileID: 1202871588}
   - component: {fileID: 1202871587}
   - component: {fileID: 1202871586}
+  - component: {fileID: 1202871623}
+  - component: {fileID: 1202871622}
+  - component: {fileID: 1202871621}
+  - component: {fileID: 1202871387}
+  - component: {fileID: 1202871624}
+  - component: {fileID: 1202871625}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -558,8 +625,8 @@ MonoBehaviour:
   storyText: Something gold lies glinting on the dusty floor. You pick it up to take
     a closer look.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 64bb2b350b3721e4db8a4120d59107fa, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -594,12 +661,17 @@ MonoBehaviour:
   description: I'll handle all of this...
   eventHandler: {fileID: 1202871551}
   commandList:
+  - {fileID: 1202871623}
+  - {fileID: 1202871621}
   - {fileID: 1202871583}
   - {fileID: 1202871580}
   - {fileID: 1202871581}
+  - {fileID: 1202871387}
   - {fileID: 1202871582}
   - {fileID: 1202871579}
   - {fileID: 1202871578}
+  - {fileID: 1202871624}
+  - {fileID: 1202871622}
 --- !u!114 &1202871311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,21 +685,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 154.43896, y: -339.53024}
+  scrollPos: {x: -135.21758, y: -1027.9675}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.5709955
+  zoom: 0.73000026
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1202871336}
-  selectedCommands:
-  - {fileID: 1202871384}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -651,7 +721,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1202871313
 MonoBehaviour:
@@ -802,8 +872,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "There\u2019s only one way to be certain."
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 64bb2b350b3721e4db8a4120d59107fa, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -866,8 +936,8 @@ MonoBehaviour:
   storyText: If only you could remember why. Perhaps the house contains more answers
     to your questions?
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 64bb2b350b3721e4db8a4120d59107fa, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1018,7 +1088,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 228.2697
     y: 212.66312
-    width: 122.680084
+    width: 125.34244
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1134,8 +1204,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 'Inside, there''s a portrait of a smiling young woman. Is it you? '
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 64bb2b350b3721e4db8a4120d59107fa, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1270,8 +1340,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 'The picture is of your youngest sister, Anabelle. '
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 64bb2b350b3721e4db8a4120d59107fa, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1760,8 +1830,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "You remember now, how you chose to come here to this place in her stead\u2026"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 64bb2b350b3721e4db8a4120d59107fa, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1826,8 +1896,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: What a fool you were to underestimate him.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 60dc8cb43b4bfb443b687c50d775b30f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1894,8 +1964,8 @@ MonoBehaviour:
     that you were the better choice. For whatever reason, the Count did not object
     to the change in his prospective bride."
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 60dc8cb43b4bfb443b687c50d775b30f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1997,8 +2067,8 @@ MonoBehaviour:
   storyText: You find a fine silver fork, and flick it experimentally with a fingertip.
     It rings out with a clear chiming sound.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 60dc8cb43b4bfb443b687c50d775b30f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2064,8 +2134,8 @@ MonoBehaviour:
   storyText: 'Your father, yourself, and your six sisters gathered in the entrance
     hall to welcome the Count into your family home. '
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 60dc8cb43b4bfb443b687c50d775b30f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2135,8 +2205,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "When you were first introduced to the Count, you found him to be\u2026\n"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 60dc8cb43b4bfb443b687c50d775b30f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2163,8 +2233,8 @@ MonoBehaviour:
   storyText: You remember the evening he first came to the house. A great feast had
     been prepared to celebrate the Count's arrival, and the joining of your two houses.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 60dc8cb43b4bfb443b687c50d775b30f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2307,8 +2377,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: But you had a new home now, and it lay far away from here.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2352,8 +2422,8 @@ MonoBehaviour:
   storyText: As the carriage rattle onwards, you pressed the flower to your breast,
     and breathed in its sweet perfume. A piece of home.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2380,8 +2450,8 @@ MonoBehaviour:
   storyText: He had not come himself; apparently there was business in the city that
     he had to attend to.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2409,8 +2479,8 @@ MonoBehaviour:
     to bid you farewell, and as the carriage sped away, you leaned out of the window
     to catch one last glimpse of their smiling faces.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2420,6 +2490,36 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1202871387
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6dd8d3a780f4d1ea772e3daf10c372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 340
+  indentLevel: 0
+  targetObjects:
+  - {fileID: 1385252257}
+  tweenType: 2
+  waitUntilFinished:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  duration:
+    floatRef: {fileID: 0}
+    floatVal: 5
+  fadeMode: 0
+  targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  targetAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 0
 --- !u!114 &1202871388
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2512,8 +2612,8 @@ MonoBehaviour:
   storyText: You were still clutching the flower tightly, when you stepped up into
     carriage the Count had sent to collect you.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2539,8 +2639,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: You tried.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2567,8 +2667,8 @@ MonoBehaviour:
   storyText: "\u201CSome small piece of home to take with you.\u201D She\u2019d whispered,
     kissing your cheek. "
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2595,8 +2695,8 @@ MonoBehaviour:
   storyText: "Annabelle pressed the flower into your hands the day you said goodbye.
     She\u2019d picked it that morning from the flowerbeds at the back of the house. "
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2623,8 +2723,8 @@ MonoBehaviour:
   storyText: A flower lies before you, the petals brittle with age. You try to pick
     it up but it crumbles to dust beneath your fingertips.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2776,8 +2876,8 @@ MonoBehaviour:
   storyText: You almost asked him about what you had seen, but at the last moment
     some instinct warned you against it.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3479,8 +3579,8 @@ MonoBehaviour:
   storyText: 'The next morning you came downstairs to find him already seated at the
     breakfast table, as polished and composed as ever. '
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3507,8 +3607,8 @@ MonoBehaviour:
   storyText: Below your feet you heard the quiet padding of his footsteps, and then
     the faint squeal of unoiled hinges as a door swung shut behind him.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3535,8 +3635,8 @@ MonoBehaviour:
   storyText: For a moment you thought you saw the sack move, but before you could
     get a second look, the Count had disappeared into the house.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3564,8 +3664,8 @@ MonoBehaviour:
     before the front of the house. It was too dark to see clearly, but you saw him
     pulling something long and cumbersome sack from the interior of the carriage. '
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3592,8 +3692,8 @@ MonoBehaviour:
   storyText: "You\u2019d fallen asleep while reading, as you so often used to, and
     had been woken by a sound from outside."
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3620,8 +3720,8 @@ MonoBehaviour:
   storyText: A book lies discarded on the floor, the pages well thumbed, and stained
     yellow with age. You always did love to read.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3665,8 +3765,8 @@ MonoBehaviour:
   storyText: "When the Count is away on business - and he often is, there is no one
     else to speak to. You find yourself\u2026"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4531,8 +4631,8 @@ MonoBehaviour:
     to you. There was no door you couldn\u2019t open, no room that was off limits.
     Except you knew that wasn\u2019t quite true."
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4577,8 +4677,8 @@ MonoBehaviour:
     had belonged to one of your sister\u2019s friends - a family heirloom that the
     girl in question had been quite enamoured with."
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4621,8 +4721,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Either way. It was too late to turn back now.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4667,8 +4767,8 @@ MonoBehaviour:
     your way to the office, sprung the hidden mechanism, and slid the little key into
     its latch.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4756,8 +4856,8 @@ MonoBehaviour:
   storyText: You smiled prettily at him across the table; the very picture of a dutiful
     wife.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4800,8 +4900,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: You tell yourself it will get easier with time.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4903,8 +5003,8 @@ MonoBehaviour:
   storyText: You have tried to befriend the servants, but they scuttle away whenever
     you try to approach them.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4933,8 +5033,8 @@ MonoBehaviour:
     surrounded by the noise, and laughter of your sisters, and adjusting to isolation
     of your new existence has proven to be difficult.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4962,8 +5062,8 @@ MonoBehaviour:
     You brush your fingertips across the letters. E. K. - your initials. If only you
     could remember what they stood for.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4989,8 +5089,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u2018To E. K. , so that you will always know when I am near.\u2019"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5017,8 +5117,8 @@ MonoBehaviour:
   storyText: "You hear the ticking before you catch sight of it. The pocket watch
     is silver, and on the back it has been engraved with someone\u2019s initials."
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5139,8 +5239,8 @@ MonoBehaviour:
     is blood everywhere. The floor is saturated with it, stained from years of hard
     use. "
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5166,8 +5266,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: The scent of iron. The scent of blood.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5194,8 +5294,8 @@ MonoBehaviour:
   storyText: "Whatever you had been prepared to find behind that door. It wasn\u2019t
     this. Never this."
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5272,8 +5372,8 @@ MonoBehaviour:
   storyText: "He was too surprised by your uncharacteristic show of affection to notice
     the theft, and as the carriage faded from view you couldn\u2019t help but feel...."
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5301,8 +5401,8 @@ MonoBehaviour:
     business trip. You stood on tiptoes to kiss him goodbye, lifting the key from
     his coat pocket with one hand as you did so. "
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5329,8 +5429,8 @@ MonoBehaviour:
   storyText: It's a candlestick, the flames long since guttered out, but when you
     lift it up you imagine you can still feel the warmth of that tiny flame.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5373,8 +5473,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Soon you would know his secret. You...
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5401,8 +5501,8 @@ MonoBehaviour:
   storyText: On squeaky hinges, the door swung open, and the Count vanished down into
     the darkness below.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5429,8 +5529,8 @@ MonoBehaviour:
   storyText: You quickly made your way back upstairs, before he could return and notice
     your presence.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5531,8 +5631,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: The count drew forth a delicate key from his pocket, and turned the lock.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5560,8 +5660,8 @@ MonoBehaviour:
     him into his office. He pressed something beneath the desk, and part of the bookshelf
     sprang forward to reveal a hidden door.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5590,8 +5690,8 @@ MonoBehaviour:
     You waited in the shadows at the back of the stairs, and followed the Count as
     he made his way down the hall, his mystery burden slung across one shoulder. "
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5618,8 +5718,8 @@ MonoBehaviour:
   storyText: You wore this that night, when you finally decided to follow him. Using
     it to blend into the shadows.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5646,8 +5746,8 @@ MonoBehaviour:
   storyText: A cloak lies in a heap at your feet, and you reach down to retrieve it,
     soft folds of cloth bunching beneath your white knuckled grip.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5690,8 +5790,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "But no, that couldn\u2019t be right. Could it?"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5718,8 +5818,8 @@ MonoBehaviour:
   storyText: She had been wearing the brooch on the night she disappeared, several
     years before.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5747,8 +5847,8 @@ MonoBehaviour:
 
 '
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5775,8 +5875,8 @@ MonoBehaviour:
   storyText: As the Count pinned the brooch to your dress, you could see he was waiting
     for your reaction.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5879,8 +5979,8 @@ MonoBehaviour:
     some of your dissatisfaction, and had given you the gift in an attempt to raise
     your spirits.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5907,8 +6007,8 @@ MonoBehaviour:
   storyText: "The brooch\u2019s design is quite particular, and you were sure you\u2019d
     seen it before. But where exactly?"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5934,8 +6034,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: A ruby brooch. The precious stone is dark, and red as wine - or blood.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5978,8 +6078,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: You would find it, eventually.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6005,8 +6105,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: But you had time.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6036,8 +6136,8 @@ MonoBehaviour:
 
 '
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6143,8 +6243,8 @@ MonoBehaviour:
   storyText: There were other keys of course. Months had passed, and you made it your
     business to learn the layout of the house.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6172,8 +6272,8 @@ MonoBehaviour:
     A key for keeping secrets. You clutch at the memory, but it slips between your
     fingers like moonlight. Very well then, you can be patient."
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6200,8 +6300,8 @@ MonoBehaviour:
   storyText: You find a ornate old key. it is large, and strangely heavy. The metal
     feels cold against your skin.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6271,8 +6371,8 @@ MonoBehaviour:
     smell it, so strong you can almost taste it, cloying as it gathers the back of
     your throat.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6299,8 +6399,8 @@ MonoBehaviour:
   storyText: "It\u2019s a small cut, nothing to worry about really. A droplet of blood
     beads upon your fingertip, builds, then splashes to the floor."
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6327,8 +6427,8 @@ MonoBehaviour:
   storyText: The dagger lodged deeeply in wooden floor, You have to pry it loose,
     and in the process you manage to slice your finger.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6372,8 +6472,8 @@ MonoBehaviour:
   storyText: The door swung open before you, and without hesitation you stepped forward
     to meet whatever lay beyond.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6413,8 +6513,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: You really did.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6440,8 +6540,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 'But death comes for us all, and you are no exception. '
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6485,8 +6585,8 @@ MonoBehaviour:
   storyText: But it's no use. He crosses the space between you as though it were nothing,
     and the last thing you feel is his hands wrapping around your neck.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6718,8 +6818,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: The odds are not in your favor.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6746,8 +6846,8 @@ MonoBehaviour:
   storyText: Turning to face him, you try your best to look brave, and defiant. But
     the truth is both of you know how this story is going to end.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6774,8 +6874,8 @@ MonoBehaviour:
   storyText: "You hadn\u2019t heard his arrival, or his telltale footsteps on the
     stairs. The Count is as swift, and silent as death, and just as unforgiving. "
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6802,8 +6902,8 @@ MonoBehaviour:
   storyText: "\u201CEvelyn. I believe you have something of mine.\u201D The Count
     says behind you, his voice soft with the promise of violence."
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6829,8 +6929,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: You remember everything.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6857,8 +6957,8 @@ MonoBehaviour:
   storyText: Your hand shakes as you pick up the mirror, and slowly raise it to your
     face. You remember now.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6914,6 +7014,7 @@ MonoBehaviour:
   - {fileID: 1202871392}
   - {fileID: 1202871552}
   - {fileID: 1202871553}
+  - {fileID: 1202871625}
   - {fileID: 1202871554}
 --- !u!114 &1202871574
 MonoBehaviour:
@@ -7214,8 +7315,8 @@ MonoBehaviour:
   storyText: With questing fingertips you feel the planes of your own face, trying
     to remember, and slowly the memory begins to surface.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 64bb2b350b3721e4db8a4120d59107fa, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7241,8 +7342,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: It's a locket.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 64bb2b350b3721e4db8a4120d59107fa, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8137,7 +8238,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1332.9183
     y: 1347.584
-    width: 120.05309
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8169,7 +8270,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1058.006
     y: 1347.5836
-    width: 122.680084
+    width: 123.97258
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8200,7 +8301,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1184.0576
     y: 1347.5834
-    width: 152.45264
+    width: 152.73969
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8233,7 +8334,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1185.2582
     y: 1255.1469
-    width: 152.45264
+    width: 151.36983
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8250,6 +8351,290 @@ MonoBehaviour:
   - {fileID: 1202871595}
   - {fileID: 1202871596}
   - {fileID: 1202871612}
+--- !u!114 &1202871621
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6dd8d3a780f4d1ea772e3daf10c372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 339
+  indentLevel: 0
+  targetObjects:
+  - {fileID: 1385252257}
+  tweenType: 2
+  waitUntilFinished:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeMode: 0
+  targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  targetAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 1
+--- !u!114 &1202871622
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ddb2783c368e94b85e3427b416a549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 336
+  indentLevel: 0
+  pause:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1202871623
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ddb2783c368e94b85e3427b416a549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 335
+  indentLevel: 0
+  pause:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &1202871624
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6dd8d3a780f4d1ea772e3daf10c372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 341
+  indentLevel: 0
+  targetObjects:
+  - {fileID: 1385252257}
+  tweenType: 2
+  waitUntilFinished:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  duration:
+    floatRef: {fileID: 0}
+    floatVal: 0.5
+  fadeMode: 0
+  targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  targetAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 0
+--- !u!114 &1202871625
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43743931d28f43f89eced820d907351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 342
+  indentLevel: 0
+  messageTarget: 1
+  _message:
+    stringRef: {fileID: 0}
+    stringVal: StoryFinished
+  messageOLD: 
+--- !u!1 &1385252257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1385252258}
+  - component: {fileID: 1385252260}
+  - component: {fileID: 1385252259}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1385252258
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385252257}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1476331762}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1385252259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385252257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1385252260
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385252257}
+  m_CullTransparentMesh: 0
+--- !u!1 &1476331758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1476331762}
+  - component: {fileID: 1476331761}
+  - component: {fileID: 1476331760}
+  - component: {fileID: 1476331759}
+  m_Layer: 5
+  m_Name: FadeCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1476331759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476331758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1476331760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476331758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1024, y: 576}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1476331761
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476331758}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1476331762
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476331758}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1385252258}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1877696425
 GameObject:
   m_ObjectHideFlags: 0
@@ -8328,7 +8713,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881659618
 GameObject:
@@ -8372,5 +8757,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

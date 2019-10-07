@@ -190,7 +190,6 @@ MonoBehaviour:
   - Managers
   - mainGameScene
   - master-narrative
-  - InitScene
   currentlyLoadedScenes: []
   scenesLoadedEvent:
     m_PersistentCalls:

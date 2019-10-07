@@ -37,6 +37,11 @@ public class MultiSceneLoader : MonoBehaviour { // Handles the loading of multip
             OpenSceneSet (startingScenes);
         }
     }
+    public void OpenStartingScenes () {
+        if (startingScenes.Length > 0 && instance == this) {
+            OpenSceneSet (startingScenes);
+        }
+    }
     public void OpenSceneSet (string[] scenesToOpen) { // opens this set of scenes and closes all others
         if (scenesToOpen.Length > 1) {
             if (setOpener == null) {

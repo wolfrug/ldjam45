@@ -162,6 +162,9 @@ public class Player : MonoBehaviour {
         if (transform.position.y < -50f) {
             KillPlayer ();
         }
+        if (transform.position.x > 0f || transform.position.x < 0f){ // To prevent moving in X
+            transform.position = new Vector3(0f, transform.position.y, transform.position.z);
+        }
     }
 
 }
