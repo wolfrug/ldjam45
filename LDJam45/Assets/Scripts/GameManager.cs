@@ -27,14 +27,27 @@ public class GameManager : MonoBehaviour {
     public StatsUpdated statUpdateEvent;
 
     public List<InteractableData> finishedItems = new List<InteractableData> ();
-
+    public List<SimpleEnemyAI> allEnemies = new List<SimpleEnemyAI> ();
     public Vector3 lastItem = Vector3.zero;
+    public bool InBossScene = false;
+    private Coroutine playerKilledCR;
 
     void Awake () {
         if (instance == null) {
             instance = this;
         } else {
             Destroy (this);
+        }
+    }
+    // Start is called before the first frame update
+    void Start () {
+        if (MultiSceneLoader.instance != null) {
+            MultiSceneLoader.instance.scenesLoadedEvent.AddListener (GameLoaded);
+        } else {
+            GameLoaded (new string[] { "", "" });
+        }
+        foreach (SimpleEnemyAI enemy in FindObjectsOfType<SimpleEnemyAI> ()) {
+            allEnemies.Add (enemy);
         }
     }
 
@@ -137,13 +150,6 @@ public class GameManager : MonoBehaviour {
         player.controller.EnableControl (!pause);
     }
 
-    // Start is called before the first frame update
-    void Start () {
-        if (MultiSceneLoader.instance != null) {
-            MultiSceneLoader.instance.scenesLoadedEvent.AddListener (GameLoaded);
-        }
-    }
-
     public void GameLoaded (string[] scenes) {
         if (scenes.Length > 0) {
             CameraManager.instance.Init ();
@@ -158,23 +164,37 @@ public class GameManager : MonoBehaviour {
     }
 
     public void PlayerKilled () { // only reload main scene
-        StartCoroutine (ReloadGamePlayScene ());
+        if (playerKilledCR == null) {
+            playerKilledCR = StartCoroutine (ReloadGamePlayScene ());
+        };
     }
     IEnumerator ReloadGamePlayScene () {
-        yield return MultiSceneLoader.instance.ReloadOpenScene ("mainGameScene");
-        if (lastItem != Vector3.zero) {
-            playerRef = null;
-            player.transform.position = new Vector3 (0f, 0f, lastItem.z);
-            PauseGame (false);
-        };
+        playerRef = null;
+        if (!InBossScene) {
+            yield return StartCoroutine (MultiSceneLoader.instance.ReloadOpenScene ("mainGameScene"));
+            if (lastItem != Vector3.zero) {
+
+                player.transform.position = new Vector3 (0f, 0f, lastItem.z);
+            };
+        } else {
+            yield return StartCoroutine (MultiSceneLoader.instance.ReloadOpenScene ("bossFight"));
+            Debug.Log ("Hmm");
+        }
+        PauseGame (false);
         CameraManager.instance.Init ();
+        playerKilledCR = null;
     }
-
-    public void LoadBossScene(){
+    IEnumerator LoadBossSceneAsync () {
+        yield return MultiSceneLoader.instance.UnloadOpenScene ("mainGameScene");
+        yield return MultiSceneLoader.instance.AddOpenScene ("bossFight");
+    }
+    public void LoadBossScene () {
+        InBossScene = true;
+        StartCoroutine (LoadBossSceneAsync ());
 
     }
-    public void LoadEndScene(){
-
+    public void LoadEndScene () {
+        MultiSceneLoader.instance.LoadSceneExclusive ("endGame");
     }
     public void Restart () {
         MultiSceneLoader.instance.OpenSceneSet (MultiSceneLoader.instance.startingScenes);

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class EnemyKilled : UnityEvent<EnemyKilled> { }
+public class EnemyKilled : UnityEvent<SimpleEnemyAI> { }
 
 public class SimpleEnemyAI : MonoBehaviour {
 
@@ -113,6 +113,11 @@ public class SimpleEnemyAI : MonoBehaviour {
             }
         };
     }
+    public void GetHurtByStuff (GameObject target, EnemyDebris hitter) {
+        if (target == gameObject) {
+            Hurt (hitter.damage);
+        }
+    }
 
     public void Kill (float waitTime) {
         // We don't care about other animations, so kill them
@@ -122,12 +127,13 @@ public class SimpleEnemyAI : MonoBehaviour {
         Activate (false);
         animationCR = StartCoroutine (AnimatorWaiter (waitTime, "die", true));
         animator.SetBool ("dead", true);
+        enemyKilledEvent.Invoke(this);
     }
 
     public void HitPlayer (float damage) {
         if (!animator.GetBool ("dead") && !GameManager.instance.paused) {
             Player player = GameManager.instance.player;
-            player.PlayerHit (damage*Time.deltaTime);
+            player.PlayerHit (damage * Time.deltaTime);
         };
     }
 

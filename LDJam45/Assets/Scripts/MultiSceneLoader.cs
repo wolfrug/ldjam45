@@ -97,9 +97,14 @@ public class MultiSceneLoader : MonoBehaviour { // Handles the loading of multip
 
     public IEnumerator ReloadOpenScene (string scene) { // Unloads given scene, then reloads it
         AsyncOperation syncOp = UnloadOpenScene (scene);
-        yield return new WaitUntil (() => syncOp.isDone);
+        Debug.LogWarning (syncOp);
+        if (syncOp != null) {
+            yield return new WaitUntil (() => syncOp.isDone);
+        };
         syncOp = AddOpenScene (scene);
-        yield return new WaitUntil (() => syncOp.isDone);
+        if (syncOp != null) {
+            yield return new WaitUntil (() => syncOp.isDone);
+        };
     }
 
 }

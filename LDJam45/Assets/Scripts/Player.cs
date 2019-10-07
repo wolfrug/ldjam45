@@ -89,6 +89,7 @@ public class Player : MonoBehaviour {
         floatAnimator.SetTrigger ("Kill");
         GameManager.instance.PauseGame (true);
         GameManager.instance.DelayedAction (3f, new System.Action (() => GameManager.instance.PlayerKilled ()));
+        enabled = false;
     }
 
     // Update is called once per frame
