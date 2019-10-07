@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -503,10 +503,6 @@ GameObject:
   - component: {fileID: 1202871629}
   - component: {fileID: 1202871628}
   - component: {fileID: 1202871627}
-  - component: {fileID: 1202871658}
-  - component: {fileID: 1202871650}
-  - component: {fileID: 1202871649}
-  - component: {fileID: 1202871643}
   - component: {fileID: 1202871642}
   - component: {fileID: 1202871635}
   - component: {fileID: 1202871632}
@@ -569,10 +565,21 @@ GameObject:
   - component: {fileID: 1202871646}
   - component: {fileID: 1202871645}
   - component: {fileID: 1202871644}
-  - component: {fileID: 1202871640}
-  - component: {fileID: 1202871639}
   - component: {fileID: 1202871625}
   - component: {fileID: 1202871554}
+  - component: {fileID: 1202871703}
+  - component: {fileID: 1202871702}
+  - component: {fileID: 1202871701}
+  - component: {fileID: 1202871700}
+  - component: {fileID: 1202871699}
+  - component: {fileID: 1202871698}
+  - component: {fileID: 1202871697}
+  - component: {fileID: 1202871658}
+  - component: {fileID: 1202871650}
+  - component: {fileID: 1202871649}
+  - component: {fileID: 1202871643}
+  - component: {fileID: 1202871640}
+  - component: {fileID: 1202871639}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -758,7 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -86.25829, y: -1238.6664}
+  scrollPos: {x: -582.76965, y: -800.2936}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -769,8 +776,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1202871341}
+  selectedCommands:
+  - {fileID: 1202871548}
   variables:
   - {fileID: 1202871689}
   - {fileID: 1202871637}
@@ -1164,7 +1173,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 228.2697
     y: 212.66312
-    width: 130.23251
+    width: 121.51159
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1741,12 +1750,16 @@ MonoBehaviour:
   useCustomTint: 0
   itemId: 31
   blockName: Item 6
-  description: Key
+  description: candlestick
   eventHandler: {fileID: 1202871346}
   commandList:
   - {fileID: 1202871544}
   - {fileID: 1202871543}
   - {fileID: 1202871542}
+  - {fileID: 1202871643}
+  - {fileID: 1202871649}
+  - {fileID: 1202871639}
+  - {fileID: 1202871640}
   - {fileID: 1202871541}
   - {fileID: 1202871540}
   - {fileID: 1202871539}
@@ -6318,8 +6331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 206
   indentLevel: 0
-  storyText: There were other keys of course. Months had passed, and you made it your
-    business to learn the layout of the house.
+  storyText: You would find it, eventually.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
@@ -6346,9 +6358,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 205
   indentLevel: 0
-  storyText: "It\u2019s not 'the' key, no. That key was smaller, and unremarkable.
-    A key for keeping secrets. You clutch at the memory, but it slips between your
-    fingers like moonlight. Very well then, you can be patient."
+  storyText: Months had passed, and you made it your business to learn the layout
+    of the house.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
@@ -6375,8 +6386,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 204
   indentLevel: 0
-  storyText: You find a ornate old key. it is large, and strangely heavy. The metal
-    feels cold against your skin.
+  storyText: "You pick the candlestick. It\u2019s flame long since guttered out, but
+    when you lift it up you imagine you can still feel its warmth."
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
@@ -6502,7 +6513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 252
   indentLevel: 0
-  storyText: The dagger lodged deeeply in wooden floor, You have to pry it loose,
+  storyText: The dagger has lodged deeeply in wooden floor, You have to pry it loose,
     and in the process you manage to slice your finger.
   description: 
   character: {fileID: 1173179862}
@@ -8318,7 +8329,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1338.0035
     y: 1444.1945
-    width: 161.62784
+    width: 153.48831
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8351,7 +8362,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1334.2772
     y: 1354.3629
-    width: 163.95343
+    width: 156.97668
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8383,7 +8394,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1317.9559
     y: 1400.1255
-    width: 196.51155
+    width: 186.04643
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8417,7 +8428,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1146.0256
     y: 1217.8923
-    width: 155.8139
+    width: 148.83716
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8786,7 +8797,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 373
   indentLevel: 0
-  storyText: Spirit run away
+  storyText: "You chose to run. In life you couldn\u2019t escape the Count but in
+    death you you have far more resources at your disposal. You burst through the
+    doorway, leaving the house and its horrors in your wake."
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -8855,18 +8868,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202871304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 437
+  itemId: 452
   indentLevel: 0
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1202871691}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
+  storyText: Somewhere there was at least one room that you could not reach; a room
+    with squeaky hinges that was kept secret. You had heard it that night, and many
+    nights since.
+  description: 
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &1202871640
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8876,18 +8897,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202871304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 436
+  itemId: 451
   indentLevel: 0
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1202871691}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
+  storyText: But you had time.
+  description: 
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &1202871641
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8931,8 +8958,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1030.8849
-    y: 1450.9738
-    width: 156.97668
+    y: 1433.5312
+    width: 148.25577
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8942,6 +8969,9 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1202871635}
+  - {fileID: 1202871701}
+  - {fileID: 1202871702}
+  - {fileID: 1202871703}
   - {fileID: 1202871625}
 --- !u!114 &1202871643
 MonoBehaviour:
@@ -8955,17 +8985,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 365
+  itemId: 450
   indentLevel: 0
-  storyText: Wrath run away
+  storyText: 'At night, free from the spying eyes of the servants, you explored your
+    new home. Searching every room, hallway, and dusty attic became familiar to you. '
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
-  fadeWhenDone: 1
+  fadeWhenDone: 0
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
@@ -9098,7 +9129,7 @@ MonoBehaviour:
   itemId: 431
   indentLevel: 1
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1202871649}
+  targetBlock: {fileID: 0}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -9113,24 +9144,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202871304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 1032.2433
-    y: 1364.5317
-    width: 159.30226
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 387
-  blockName: Wrath ending (flee)
+  itemId: 449
+  indentLevel: 0
+  storyText: There was no door you couldn't open, no room that was off limits. Except
+    you knew that wasn't quite true.
   description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 1202871643}
-  - {fileID: 1202871640}
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &1202871650
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9143,9 +9175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 358
+  itemId: 448
   indentLevel: 0
-  storyText: sad run away
+  storyText: This time, you're prepared.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -9251,7 +9283,7 @@ MonoBehaviour:
   itemId: 428
   indentLevel: 1
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1202871658}
+  targetBlock: {fileID: 0}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -9393,24 +9425,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202871304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 1019.31226
-    y: 1405.2107
-    width: 191.86038
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 386
-  blockName: Melancholy ending (flee)
+  itemId: 447
+  indentLevel: 0
+  storyText: "\u201CEvelyn?\" The Count asks, disbelieving. \"But that's impossible.
+    You should be...\""
   description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 1202871650}
-  - {fileID: 1202871639}
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &1202871659
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10668,6 +10701,201 @@ MonoBehaviour:
   pause:
     booleanRef: {fileID: 0}
     booleanVal: 0
+--- !u!114 &1202871697
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 446
+  indentLevel: 0
+  storyText: '
+
+    "...dead?" You smile. "Don''t worry dear. You''ll be joining me soon enough."'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871698
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 445
+  indentLevel: 0
+  storyText: You dash forward, one spectral hand extended towards his throat.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871699
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 444
+  indentLevel: 0
+  storyText: You've fought long and hard to get this far, and in death perhaps you
+    have found a strength you never possessed in life.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871700
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 818.81665
+    y: 1479.363
+    width: 124.418564
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 443
+  blockName: Pre fight intro
+  description: Not sure if needed.
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1202871699}
+  - {fileID: 1202871658}
+  - {fileID: 1202871697}
+  - {fileID: 1202871698}
+  - {fileID: 1202871650}
+--- !u!114 &1202871701
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 442
+  indentLevel: 0
+  storyText: Light surrounds you, warming your face.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871702
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 441
+  indentLevel: 0
+  storyText: "When you feel yourself being lifted upwards, you don\u2019t resist. "
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1202871703
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 440
+  indentLevel: 0
+  storyText: Whoever said that death was the end?
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &1385252257
 GameObject:
   m_ObjectHideFlags: 0
