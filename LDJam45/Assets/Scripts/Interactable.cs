@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using Fungus;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Interactable : MonoBehaviour {
     public InteractableData data;
+    public Image itemImage; 
+    public Text itemText;
     public MeshRenderer meshRenderer;
     // RED, GREEN, BLUE
     public Material[] materials;
@@ -16,6 +19,7 @@ public class Interactable : MonoBehaviour {
     }
 
     void Start () { // set the color of stuff based on its type
+    /*
         if (meshRenderer != null && lightSource != null && data != null && materials.Length == 3) {
             switch (data.type) {
                 case InteractableColor.RED:
@@ -37,6 +41,9 @@ public class Interactable : MonoBehaviour {
                         break;
                     }
             }
-        }
+        } */
+        itemImage.sprite = data.image;
+        itemText.text = data.name_;
+
     }
 }

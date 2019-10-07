@@ -33,7 +33,7 @@ public class AgentInteracted : Custom_Fungus_EventHandler {
 
     void OnCustom_EventHandlerEvent (Custom_EventHandlerEvent evt) {
 
-         Debug.Log("Event raised: " + evt.data);
+        // Debug.Log("Event raised: " + evt.data);
          if (evt.data == target) {
              ExecuteBlock();
              return;

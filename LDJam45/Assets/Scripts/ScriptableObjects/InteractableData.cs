@@ -12,5 +12,6 @@ public enum InteractableColor {
 public class InteractableData : ScriptableObjectBase {
 
     public InteractableColor type;
+    public Sprite image;
 
 }
