@@ -753,11 +753,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 25.368902, y: -1007.2699}
+  scrollPos: {x: 130.8885, y: -885.8075}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.8600005
+  zoom: 0.8300005
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1159,7 +1159,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 228.2697
     y: 212.66312
-    width: 130.23251
+    width: 133.13248
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4846,7 +4846,7 @@ MonoBehaviour:
     You just had to hope that he wouldn\u2019t notice the theft before his return."
   description: 
   character: {fileID: 1173179862}
-  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6548,7 +6548,7 @@ MonoBehaviour:
     false wall.
   description: 
   character: {fileID: 1173179862}
-  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8315,7 +8315,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1338.0035
     y: 1444.1945
-    width: 161.62784
+    width: 165.66257
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8348,7 +8348,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1334.2772
     y: 1354.3629
-    width: 163.95343
+    width: 168.0722
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8380,7 +8380,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1317.9559
     y: 1400.1255
-    width: 196.51155
+    width: 201.80713
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8414,7 +8414,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1146.0256
     y: 1217.8923
-    width: 155.8139
+    width: 159.63849
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8636,7 +8636,7 @@ MonoBehaviour:
   storyText: You crossed the threshold without hesitation.
   description: 
   character: {fileID: 1173179862}
-  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8664,7 +8664,7 @@ MonoBehaviour:
     of old hinges. '
   description: 
   character: {fileID: 1173179862}
-  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8692,7 +8692,7 @@ MonoBehaviour:
     key into the lock, you found yourself holding your breath.
   description: 
   character: {fileID: 1173179862}
-  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
+  portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8933,7 +8933,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1030.8849
     y: 1433.5312
-    width: 156.97668
+    width: 160.8433
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10430,7 +10430,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 818.81665
     y: 1479.363
-    width: 129.06973
+    width: 131.92766
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0

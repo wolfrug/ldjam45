@@ -35,7 +35,7 @@ public class EnemyDebris : MonoBehaviour {
         gameObject.SetActive (true);
     }
     public void Hit (GameObject hitTarget) {
-        Debug.Log ("Hit!");
+       // Debug.Log ("Hit!");
         debrisHitEvent.Invoke (hitTarget, this);
         DestroyDebris ();
         //GameManager.instance.Restart ();
@@ -82,7 +82,7 @@ public class EnemyDebris : MonoBehaviour {
     }
 
     void OnCollisionEnter (Collision other) {
-        Debug.Log ("Collided!");
+       // Debug.Log ("Collided!");
         DestroyDebris ();
     }
 
