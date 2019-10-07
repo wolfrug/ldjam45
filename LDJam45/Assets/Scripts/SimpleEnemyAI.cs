@@ -27,6 +27,7 @@ public class SimpleEnemyAI : MonoBehaviour {
     private Coroutine animationCR;
 
     public EnemyKilled enemyKilledEvent;
+    private bool forcedActive = false;
 
     public float health = 5f;
     void Start () {
@@ -51,6 +52,10 @@ public class SimpleEnemyAI : MonoBehaviour {
         if (wayPoints.Length > 0) {
             currentWp = Random.Range (0, wayPoints.Length);
         }
+    }
+
+    public void ForceActive () { // For spoopy cutscenes
+        forcedActive = true;
     }
 
     void WalkNext () {
@@ -127,7 +132,7 @@ public class SimpleEnemyAI : MonoBehaviour {
         Activate (false);
         animationCR = StartCoroutine (AnimatorWaiter (waitTime, "die", true));
         animator.SetBool ("dead", true);
-        enemyKilledEvent.Invoke(this);
+        enemyKilledEvent.Invoke (this);
     }
 
     public void HitPlayer (float damage) {
@@ -183,7 +188,7 @@ public class SimpleEnemyAI : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        if (active && !GameManager.instance.paused) {
+        if (active && !GameManager.instance.paused || forcedActive) {
             if (currentLookTarget != null) {
                 Quaternion _lookRotation =
                     Quaternion.LookRotation ((currentLookTarget.position - transform.position).normalized);

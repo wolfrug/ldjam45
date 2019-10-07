@@ -974,6 +974,9 @@ GameObject:
   - component: {fileID: 736964097}
   - component: {fileID: 736964096}
   - component: {fileID: 736964095}
+  - component: {fileID: 736964102}
+  - component: {fileID: 736964101}
+  - component: {fileID: 736964100}
   m_Layer: 0
   m_Name: BossRoomFlowchart
   m_TagString: Untagged
@@ -1146,8 +1149,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 736964086}
+  selectedBlocks: []
   selectedCommands: []
   variables: []
   description: 
@@ -1257,6 +1259,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 736964086}
   target: {fileID: 11400000, guid: fb78ac4f20ce918428b24faa93d87ffa, type: 2}
+--- !u!114 &736964100
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736964085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  indentLevel: 0
+  duration: 1
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+--- !u!114 &736964101
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736964085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff5d850a887844fe87ae7d366d3ab5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 736964102}
+--- !u!114 &736964102
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736964085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 902
+    y: 73
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 10
+  blockName: Fade in
+  description: 
+  eventHandler: {fileID: 736964101}
+  commandList:
+  - {fileID: 736964100}
 --- !u!1001 &808713959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2452,11 +2512,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5520668267504626900, guid: ef6a9ed7a4b243c4da73879fb34bc2da,
-        type: 3}
-      propertyPath: m_TagString
-      value: TheCount
-      objectReference: {fileID: 0}
     - target: {fileID: 5520668267504626898, guid: ef6a9ed7a4b243c4da73879fb34bc2da,
         type: 3}
       propertyPath: enemyKilledEvent.m_PersistentCalls.m_Calls.Array.size
@@ -2537,6 +2592,16 @@ PrefabInstance:
       propertyPath: enemyKilledEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5520668267955677456, guid: ef6a9ed7a4b243c4da73879fb34bc2da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520668267504626900, guid: ef6a9ed7a4b243c4da73879fb34bc2da,
+        type: 3}
+      propertyPath: m_TagString
+      value: TheCount
+      objectReference: {fileID: 0}
     - target: {fileID: 5520668267504626897, guid: ef6a9ed7a4b243c4da73879fb34bc2da,
         type: 3}
       propertyPath: tags.Array.size
@@ -2561,11 +2626,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520668267955677456, guid: ef6a9ed7a4b243c4da73879fb34bc2da,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.52
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef6a9ed7a4b243c4da73879fb34bc2da, type: 3}
@@ -2727,7 +2787,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1806748412}
+    m_TransformParent: {fileID: 2052175430}
     m_Modifications:
     - target: {fileID: 8242098505624396827, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
         type: 3}
@@ -2757,22 +2817,22 @@ PrefabInstance:
     - target: {fileID: 8242098505624396821, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8242098505624396821, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8242098505624396821, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8242098505624396821, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8242098505624396821, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
         type: 3}
@@ -2828,12 +2888,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 119a54f7f2fe0fe44b47bb0a7909c59c, type: 3}
---- !u!4 &1806748412 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5520668267401207422, guid: ef6a9ed7a4b243c4da73879fb34bc2da,
-    type: 3}
-  m_PrefabInstance: {fileID: 1408382686}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1840404574
 GameObject:
   m_ObjectHideFlags: 0

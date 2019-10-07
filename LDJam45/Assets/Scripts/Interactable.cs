@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour {
 
     void Start () {
         if (GameManager.instance.finishedItems.Contains (data)) {
-            GetComponentInChildren<GenericActivate> ().Activate ();
+            GetComponentInChildren<GenericActivate> ().enabled = false;
         }
         itemImage.sprite = data.image;
         itemText.text = data.name_;

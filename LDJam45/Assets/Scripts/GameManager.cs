@@ -187,6 +187,8 @@ public class GameManager : MonoBehaviour {
     IEnumerator LoadBossSceneAsync () {
         yield return MultiSceneLoader.instance.UnloadOpenScene ("mainGameScene");
         yield return MultiSceneLoader.instance.AddOpenScene ("bossFight");
+        playerRef = null;
+        CameraManager.instance.Init();
     }
     public void LoadBossScene () {
         InBossScene = true;
