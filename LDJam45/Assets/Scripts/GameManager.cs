@@ -168,6 +168,12 @@ public class GameManager : MonoBehaviour {
             PauseGame (false);
         };
         CameraManager.instance.Init ();
+    }
+
+    public void LoadBossScene(){
+
+    }
+    public void LoadEndScene(){
 
     }
     public void Restart () {
