@@ -768,10 +768,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1202871310}
-  selectedCommands:
-  - {fileID: 1202871582}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 1202871689}
   - {fileID: 1202871637}
@@ -7104,8 +7102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 294
   indentLevel: 0
-  storyText: 'Just a moment ago you were trying to get away from... someone, or something?
-    Or were you?
+  storyText: 'Just a moment ago you were trying desperately to get away from someone,
+    or... something. But whatever it was is gone now.
 
 
     You clutch at the memory, but it slips between your fingers like moonlight.'
