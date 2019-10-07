@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour {
     private float GreenStatCur = 0f;
     public StatsUpdated statUpdateEvent;
 
+    public List<InteractableData> finishedItems = new List<InteractableData> ();
+
+    public Vector3 lastItem = Vector3.zero;
+
     void Awake () {
         if (instance == null) {
             instance = this;
@@ -130,7 +134,7 @@ public class GameManager : MonoBehaviour {
 
     public void PauseGame (bool pause) {
         paused = pause;
-        player.controller.EnableControl(!pause);
+        player.controller.EnableControl (!pause);
     }
 
     // Start is called before the first frame update
@@ -145,14 +149,27 @@ public class GameManager : MonoBehaviour {
             CameraManager.instance.Init ();
         };
     }
-    public void DelayedAction(float delay, System.Action callBack){
-        StartCoroutine(ActionWaiter(delay, callBack));
+    public void DelayedAction (float delay, System.Action callBack) {
+        StartCoroutine (ActionWaiter (delay, callBack));
     }
     IEnumerator ActionWaiter (float timeToWait, System.Action callBack) { // Usage: StartCoroutine (ActionWaiter (waitTime, new System.Action (() => RunTutorial (tutorialName))));
         yield return new WaitForSeconds (timeToWait);
         callBack.Invoke ();
     }
 
+    public void PlayerKilled () { // only reload main scene
+        StartCoroutine (ReloadGamePlayScene ());
+    }
+    IEnumerator ReloadGamePlayScene () {
+        yield return MultiSceneLoader.instance.ReloadOpenScene ("mainGameScene");
+        if (lastItem != Vector3.zero) {
+            playerRef = null;
+            player.transform.position = new Vector3 (0f, 0f, lastItem.z);
+            PauseGame (false);
+        };
+        CameraManager.instance.Init ();
+
+    }
     public void Restart () {
         MultiSceneLoader.instance.OpenSceneSet (MultiSceneLoader.instance.startingScenes);
     }

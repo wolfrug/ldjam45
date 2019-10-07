@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2756168482233705539}
   - component: {fileID: 4642098094871615386}
   - component: {fileID: 879555949723368000}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Charge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5059,7 +5059,7 @@ GameObject:
   - component: {fileID: 4776061189194371525}
   - component: {fileID: 7850040585898796278}
   - component: {fileID: 3426396853461521925}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10002,7 +10002,7 @@ GameObject:
   - component: {fileID: 835126972740614742}
   - component: {fileID: 835126972740614760}
   - component: {fileID: 835126972740614750}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -10158,12 +10158,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b249eaa06ce91954294ff7bca833edae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 835126972740614742}
   sprite: {fileID: 7625682733114804233}
   shield: {fileID: 8310756315108007689}
   attack: {fileID: 8101842340451524285}
   levitate: {fileID: 8408748714606052883}
   floatAnimator: {fileID: 2204579433729778196}
+  playerAnimator: {fileID: 74996289290367238}
   shieldOn: 0
   attackCharging: 0
   floatOn: 0
@@ -10203,7 +10204,7 @@ GameObject:
   - component: {fileID: 180641564782000982}
   - component: {fileID: 7625682733114804233}
   - component: {fileID: 74996289290367238}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: ghostgirl spritesheet_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10263,7 +10264,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 171b024699f123547bd06587dc4adf37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10305,7 +10306,7 @@ GameObject:
   - component: {fileID: 4743255019990764024}
   - component: {fileID: 2546492716512106057}
   - component: {fileID: 7255718779849933870}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RightHand (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15236,7 +15237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4113652903748862551}
   - component: {fileID: 2204579433729778196}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: FloatParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15287,7 +15288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4840125090067445229}
   - component: {fileID: 1612868438860051101}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: GreenLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15356,7 +15357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6640750780301171802}
   - component: {fileID: 1944090512221440421}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: BlueLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15426,7 +15427,7 @@ GameObject:
   - component: {fileID: 1958535139254873719}
   - component: {fileID: 6688484598163497696}
   - component: {fileID: 7213520747696096132}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Charge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20124,7 +20125,7 @@ GameObject:
   - component: {fileID: 8514732533112728465}
   - component: {fileID: 3518708133857543748}
   - component: {fileID: 510403567249411015}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24824,7 +24825,7 @@ GameObject:
   - component: {fileID: 7022800797243990580}
   - component: {fileID: 1038770736788361059}
   - component: {fileID: 9187658971553853858}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: AttackCharge
   m_TagString: DebrisEnemy
   m_Icon: {fileID: 0}
@@ -24892,7 +24893,7 @@ GameObject:
   - component: {fileID: 4170419859927176240}
   - component: {fileID: 766760296569277475}
   - component: {fileID: 8960984134616440265}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24997,7 +24998,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6070380365949115485}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Levitate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25031,7 +25032,7 @@ GameObject:
   - component: {fileID: 7051795510495456863}
   - component: {fileID: 5313150910013916343}
   - component: {fileID: 4336316110467187979}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RightHand (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29963,6 +29964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RedLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463024771802919746, guid: baf9365519e45fc4da27d234a90cb696,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4935842411163751747, guid: baf9365519e45fc4da27d234a90cb696,
         type: 3}
