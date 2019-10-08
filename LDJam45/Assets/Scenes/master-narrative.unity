@@ -250,7 +250,6 @@ GameObject:
   - component: {fileID: 1202871375}
   - component: {fileID: 1202871374}
   - component: {fileID: 1202871371}
-  - component: {fileID: 1202871364}
   - component: {fileID: 1202871361}
   - component: {fileID: 1202871396}
   - component: {fileID: 1202871395}
@@ -318,7 +317,6 @@ GameObject:
   - component: {fileID: 1202871481}
   - component: {fileID: 1202871480}
   - component: {fileID: 1202871479}
-  - component: {fileID: 1202871478}
   - component: {fileID: 1202871477}
   - component: {fileID: 1202871476}
   - component: {fileID: 1202871475}
@@ -381,8 +379,6 @@ GameObject:
   - component: {fileID: 1202871540}
   - component: {fileID: 1202871539}
   - component: {fileID: 1202871538}
-  - component: {fileID: 1202871537}
-  - component: {fileID: 1202871536}
   - component: {fileID: 1202871535}
   - component: {fileID: 1202871534}
   - component: {fileID: 1202871533}
@@ -391,7 +387,6 @@ GameObject:
   - component: {fileID: 1202871530}
   - component: {fileID: 1202871529}
   - component: {fileID: 1202871528}
-  - component: {fileID: 1202871527}
   - component: {fileID: 1202871526}
   - component: {fileID: 1202871525}
   - component: {fileID: 1202871524}
@@ -400,7 +395,6 @@ GameObject:
   - component: {fileID: 1202871521}
   - component: {fileID: 1202871520}
   - component: {fileID: 1202871519}
-  - component: {fileID: 1202871518}
   - component: {fileID: 1202871517}
   - component: {fileID: 1202871516}
   - component: {fileID: 1202871515}
@@ -516,9 +510,9 @@ GameObject:
   - component: {fileID: 1202871636}
   - component: {fileID: 1202871595}
   - component: {fileID: 1202871696}
-  - component: {fileID: 1202871695}
   - component: {fileID: 1202871694}
   - component: {fileID: 1202871693}
+  - component: {fileID: 1202871692}
   - component: {fileID: 1202871691}
   - component: {fileID: 1202871690}
   - component: {fileID: 1202871689}
@@ -555,7 +549,6 @@ GameObject:
   - component: {fileID: 1202871625}
   - component: {fileID: 1202871554}
   - component: {fileID: 1202871703}
-  - component: {fileID: 1202871702}
   - component: {fileID: 1202871701}
   - component: {fileID: 1202871700}
   - component: {fileID: 1202871699}
@@ -565,9 +558,12 @@ GameObject:
   - component: {fileID: 1202871650}
   - component: {fileID: 1202871649}
   - component: {fileID: 1202871643}
-  - component: {fileID: 1202871640}
   - component: {fileID: 1202871639}
-  - component: {fileID: 1202871644}
+  - component: {fileID: 1202871364}
+  - component: {fileID: 1202871536}
+  - component: {fileID: 1202871527}
+  - component: {fileID: 1202871518}
+  - component: {fileID: 1202871478}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -689,8 +685,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 26
   indentLevel: 0
-  storyText: Something gold lies glinting on the dusty floor. You pick it up to take
-    a closer look.
+  storyText: Something gold lies glinting on the floor. You pick it up to take a closer
+    look.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 64bb2b350b3721e4db8a4120d59107fa, type: 3}
@@ -753,11 +749,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 130.8885, y: -885.8075}
+  scrollPos: {x: -231.87346, y: -1151.1503}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.8300005
+  zoom: 0.808
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -865,7 +861,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 371.14554
     y: 155.31558
-    width: 120
+    width: 120.544556
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1159,7 +1155,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 228.2697
     y: 212.66312
-    width: 133.13248
+    width: 135.39603
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1274,7 +1270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 65
   indentLevel: 0
-  storyText: 'Inside, there''s a portrait of a smiling young woman. '
+  storyText: 'Inside there''s a portrait of a smiling young woman. '
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 64bb2b350b3721e4db8a4120d59107fa, type: 3}
@@ -1673,7 +1669,6 @@ MonoBehaviour:
   - {fileID: 1202871521}
   - {fileID: 1202871520}
   - {fileID: 1202871519}
-  - {fileID: 1202871518}
   - {fileID: 1202871513}
   - {fileID: 1202871514}
   - {fileID: 1202871512}
@@ -1708,7 +1703,6 @@ MonoBehaviour:
   - {fileID: 1202871372}
   - {fileID: 1202871368}
   - {fileID: 1202871375}
-  - {fileID: 1202871364}
   - {fileID: 1202871371}
   - {fileID: 1202871374}
   - {fileID: 1202871367}
@@ -1745,7 +1739,6 @@ MonoBehaviour:
   - {fileID: 1202871643}
   - {fileID: 1202871649}
   - {fileID: 1202871639}
-  - {fileID: 1202871640}
   - {fileID: 1202871541}
   - {fileID: 1202871540}
   - {fileID: 1202871539}
@@ -1815,7 +1808,6 @@ MonoBehaviour:
   - {fileID: 1202871533}
   - {fileID: 1202871531}
   - {fileID: 1202871532}
-  - {fileID: 1202871527}
   - {fileID: 1202871526}
   - {fileID: 1202871530}
   - {fileID: 1202871529}
@@ -1849,8 +1841,8 @@ MonoBehaviour:
   - {fileID: 1202871395}
   - {fileID: 1202871394}
   - {fileID: 1202871393}
-  - {fileID: 1202871386}
   - {fileID: 1202871391}
+  - {fileID: 1202871386}
   - {fileID: 1202871385}
   - {fileID: 1202871390}
   - {fileID: 1202871389}
@@ -1970,7 +1962,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 74
   indentLevel: 0
-  storyText: What a fool you were to underestimate him.
+  storyText: But then your opinion hardly made a difference. This was a transaction
+    after all. A daughter given in exchange for the clearing of your father's debts.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 60dc8cb43b4bfb443b687c50d775b30f, type: 3}
@@ -2031,26 +2024,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202871304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 443c1ab2b500b374b847cf5563af130e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 73
+  itemId: 453
   indentLevel: 0
-  storyText: "He'd come for Anabelle of course, but you\u2019d convinced him that
-    as the eldest sister, you were far better suited to be his bride. This was a transaction
-    after all. A daughter in exchange for a debt."
-  description: 
-  character: {fileID: 1173179862}
-  portrait: {fileID: 21300000, guid: 60dc8cb43b4bfb443b687c50d775b30f, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 0
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  typeOfFinish: 0
 --- !u!114 &1202871365
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2140,7 +2119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 52
   indentLevel: 0
-  storyText: "You find a fine silver fork. Didn\u2019t your household used to have
+  storyText: "You find a fine silver fork. Didn\u2019t your grandmother once have
     a set just like this? "
   description: 
   character: {fileID: 1173179862}
@@ -2207,7 +2186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 72
   indentLevel: 0
-  storyText: You, your father, and your six sisters gathered in the entrance hall
+  storyText: You, your father, and your six sisters had gathered in the entrance hall
     to welcome the Count into your family home.
   description: 
   character: {fileID: 1173179862}
@@ -2279,7 +2258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 71
   indentLevel: 0
-  storyText: "When you were first introduced to the Count, you found him to be\u2026\n"
+  storyText: "When you were first introduced, you found him to be\u2026\n"
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 60dc8cb43b4bfb443b687c50d775b30f, type: 3}
@@ -2306,8 +2285,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 70
   indentLevel: 0
-  storyText: 'Your father would bring only out the silverware for the most esteemed
-    guests, which is what he did the first time the Count came to dinner. '
+  storyText: "Your father would bring out the silverware for the most esteemed guests.
+    \ \n\nHe brought it out that first time the Count came to dinner. "
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 60dc8cb43b4bfb443b687c50d775b30f, type: 3}
@@ -2451,7 +2430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 89
   indentLevel: 0
-  storyText: But you had a new home now, and it lay far away from here.
+  storyText: But you had a new home now.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
@@ -2495,7 +2474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 87
   indentLevel: 0
-  storyText: As the carriage rattle onwards, you pressed the flower to your breast,
+  storyText: As the carriage rattled onwards you pressed the flower to your breast,
     and breathed in its sweet perfume. A piece of home.
   description: 
   character: {fileID: 1173179862}
@@ -2551,9 +2530,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 85
   indentLevel: 0
-  storyText: Your father, and your sisters all gathered on the steps of the house
-    to bid you farewell, and as the carriage sped away, you leaned out of the window
-    to catch one last glimpse of their smiling faces.
+  storyText: Your family had gathered on the front steps to bid you farewell, and
+    as the carriage sped away you leaned out of the window to catch one last glimpse
+    of their smiling faces.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
@@ -2685,7 +2664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 80
   indentLevel: 0
-  storyText: You were still clutching the flower tightly, when you stepped up into
+  storyText: You were still clutching the flower tightly when you stepped up into
     carriage the Count had sent to collect you.
   description: 
   character: {fileID: 1173179862}
@@ -2796,8 +2775,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 76
   indentLevel: 0
-  storyText: A flower lies before you, the petals brittle with age. You try to pick
-    it up but it crumbles to dust beneath your fingertips.
+  storyText: A flower lies before you, the petals brittle and faded. You try to pick
+    it up, but it crumbles to dust beneath your fingertips.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
@@ -2977,7 +2956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 201
   indentLevel: 0
-  text: You decided it was probably nothing of note.
+  text: You didn't want to risk his ire.
   description: 
   targetBlock: {fileID: 1202871404}
   hideIfVisited: 0
@@ -3476,9 +3455,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1202871478}
-  - {fileID: 1202871537}
-  - {fileID: 1202871536}
   - {fileID: 1202871535}
   - {fileID: 1202871477}
 --- !u!114 &1202871421
@@ -3683,8 +3659,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 197
   indentLevel: 0
-  storyText: Below your feet you heard the quiet padding of his footsteps, and then
-    the faint squeal of unoiled hinges as a door swung shut behind him.
+  storyText: Downstairs you heard the quiet padding of his footsteps, and then the
+    faint squeal of unoiled hinges as a door swung open somewhere within the house.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
@@ -3711,8 +3687,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 196
   indentLevel: 0
-  storyText: For a moment you thought you saw the sack move, but before you could
-    get a second look, the Count had disappeared into the house.
+  storyText: For a moment you thought you saw the sack move, as though whatever it
+    contained were alive. But before you could get a second look, the Count had disappeared
+    into the house with his burden.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
@@ -3739,9 +3716,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 195
   indentLevel: 0
-  storyText: 'You walked over to the window, and saw the Count pulling up in his carriage
-    before the front of the house. It was too dark to see clearly, but you saw him
-    pulling something long and cumbersome sack from the interior of the carriage. '
+  storyText: 'A sound had awoken you, and you''d gone to the window to see what it
+    was. The Count''s carriage had pulled up outside the front doors. It was too dark
+    to see clearly, but you saw him pulling a long, heavy sack from the interior of
+    the carriage. '
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
@@ -3768,8 +3746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 194
   indentLevel: 0
-  storyText: "You\u2019d fallen asleep while reading, as you so often used to, and
-    had been woken by a sound from outside."
+  storyText: Often you would fall asleep while reading, and that night was no exception.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
@@ -3796,8 +3773,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 193
   indentLevel: 0
-  storyText: A book lies discarded on the floor, the pages well thumbed, and stained
-    yellow with age. You always did love to read.
+  storyText: A book lies discarded on the floor, the pages well thumbed and spotted
+    with age. You'd always loved stories.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
@@ -3841,8 +3818,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 191
   indentLevel: 0
-  storyText: "When the Count is away on business - and he often is, there is no one
-    else to speak to. You find yourself\u2026"
+  storyText: "When the Count was away on business - and he often was, there was no
+    one else to speak to. You found yourself\u2026"
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
@@ -4700,27 +4677,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202871304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 147
+  itemId: 457
   indentLevel: 0
-  storyText: "Your husband had gifted you the keys to the grounds, and you explored
-    every inch of your new home. Every room, hallway, and dusty attic became familiar
-    to you. There was no door you couldn\u2019t open, no room that was off limits.
-    Except you knew that wasn\u2019t quite true."
-  description: 
-  character: {fileID: 1173179862}
-  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 0
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  musicClip: {fileID: 8300000, guid: 02731c48591d1f54c9cc86e040604778, type: 3}
+  atTime: 0
+  loop: 1
+  fadeDuration: 1
 --- !u!114 &1202871479
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4752,7 +4717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 145
   indentLevel: 0
-  storyText: "Only later did you remember where it was you had seen that brooch. It
+  storyText: "Only later did you remember where it was you had seen that brooch. \n\nIt
     had belonged to one of your sister\u2019s friends - a family heirloom that the
     girl in question had been quite enamoured with."
   description: 
@@ -4887,7 +4852,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 139
   indentLevel: 0
-  storyText: While you slept upstairs each night unknowing, your husband did this.
+  storyText: 'While you slept upstairs each night unknowing, your husband did this.
+
+
+    How could you not have known?'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -4931,7 +4899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 137
   indentLevel: 0
-  storyText: You smiled prettily at him across the table; the very picture of a dutiful
+  storyText: You smiled prettily at him across the table, the very picture of a dutiful
     wife.
   description: 
   character: {fileID: 1173179862}
@@ -4976,7 +4944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 135
   indentLevel: 0
-  storyText: You tell yourself it will get easier with time.
+  storyText: You tried to tell yourself that it would get easier with time.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
@@ -5078,8 +5046,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 131
   indentLevel: 0
-  storyText: You have tried to befriend the servants, but they scuttle away whenever
-    you try to approach them.
+  storyText: You had tried to befriend the servants, but they scuttled away whenever
+    you tried to approach them.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
@@ -5106,10 +5074,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 130
   indentLevel: 0
-  storyText: You remember sitting by the window, watching as the hands made their
-    inexorable path across the watchface. The hours dragged. You grew up constantly
-    surrounded by the noise, and laughter of your sisters, and adjusting to isolation
-    of your new existence has proven to be difficult.
+  storyText: The first few weeks in your new home dragged by. You had grown up in
+    a large family, constantly surrounded by noise, and movement. Adjusting to isolation
+    of your new existence had proven to be difficult. Time stretched out before you,
+    endless, and unforgiving.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
@@ -5136,9 +5104,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 129
   indentLevel: 0
-  storyText: The Count gave you the pocket watch when you first came to the house.
-    You brush your fingertips across the letters. E. K. - your initials. If only you
-    could remember what they stood for.
+  storyText: "You remember now. The Count gave you this pocket watch as a welcoming
+    gift. \n\nYou brush your fingertips across the letters. E. K. - your initials.
+    If only you could remember what they stood for."
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
@@ -5165,7 +5133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 128
   indentLevel: 0
-  storyText: "\u2018To E. K. , so that you will always know when I am near.\u2019"
+  storyText: "\u2018To E. K. so you will always know when I am near.'"
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
@@ -5192,8 +5160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 127
   indentLevel: 0
-  storyText: "You hear the ticking before you catch sight of it. The pocket watch
-    is silver, and on the back it has been engraved with someone\u2019s initials."
+  storyText: "You follow the faint sound of ticking to its source, and find an ornate
+    pocket watch, with someone\u2019s initials etched onto the back."
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
@@ -5312,10 +5280,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 260
   indentLevel: 0
-  storyText: "Bodies line the wall, suspended from chains. They are all women, or
-    they were, once. Whatever he has done to them doesn\u2019t bear mentioning. There
-    is blood everywhere. The floor is saturated with it, stained from years of hard
-    use. "
+  storyText: "The bodies of a dozen women line the walls, hanging suspended from iron
+    chains. Whatever he has done to them doesn\u2019t bear mentioning. There is blood
+    everywhere. The floor is saturated with it."
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
@@ -5342,14 +5309,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 259
   indentLevel: 0
-  storyText: The scent of iron. The scent of blood.
+  storyText: '
+
+    The scent of iron. The scent of blood.'
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
-  extendPrevious: 0
+  extendPrevious: 1
   fadeWhenDone: 0
   waitForClick: 1
   stopVoiceover: 1
@@ -5422,7 +5391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 256
   indentLevel: 0
-  text: You look away from the horrors before you.
+  text: You try not to look at the horrors before you.
   description: 
   targetBlock: {fileID: 1202871397}
   hideIfVisited: 0
@@ -5575,8 +5544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 236
   indentLevel: 0
-  storyText: On squeaky hinges, the door swung open, and the Count vanished down into
-    the darkness below.
+  storyText: The Count drew forth a small key from his pocket, and unloacked the door.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
@@ -5603,8 +5571,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 235
   indentLevel: 0
-  storyText: You quickly made your way back upstairs, before he could return and notice
-    your presence.
+  storyText: You quickly made your way back to your chambers, before he could notice
+    you.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
@@ -5701,24 +5669,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202871304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 231
+  itemId: 456
   indentLevel: 0
-  storyText: The count drew forth a delicate key from his pocket, and turned the lock.
-  description: 
-  character: {fileID: 1173179862}
-  portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 0
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  musicClip: {fileID: 8300000, guid: f9ee213c1f752714c9e3e6e08de173f5, type: 3}
+  atTime: 0
+  loop: 1
+  fadeDuration: 1
 --- !u!114 &1202871519
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5762,10 +5721,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 229
   indentLevel: 0
-  storyText: "You\u2019d grown accustomed to his comings and goings, and so when you
-    heard the clatter of the carriage outside just after midnight, you were ready.
-    You waited in the shadows at the back of the stairs, and followed the Count as
-    he made his way down the hall, his mystery burden slung across one shoulder. "
+  storyText: "You\u2019d grown accustomed to the Count's comings and goings, and so
+    when you heard the clatter of the carriage outside just after midnight, you were
+    ready. \n\nYou waited in the shadows at the back of the stairs, and followed him
+    as he made his way down the hall, his mystery burden slung across one shoulder. "
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
@@ -5792,8 +5751,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 228
   indentLevel: 0
-  storyText: You wore this that night, when you finally decided to follow him. Using
-    it to blend into the shadows.
+  storyText: You wore this on the night you finally decided to follow him, using it
+    to blend into the shadows.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
@@ -5821,7 +5780,7 @@ MonoBehaviour:
   itemId: 227
   indentLevel: 0
   storyText: A cloak lies in a heap at your feet, and you reach down to retrieve it,
-    soft folds of cloth bunching beneath your white knuckled grip.
+    bunching the the soft folds of cloth in your fists.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
@@ -5893,7 +5852,7 @@ MonoBehaviour:
   itemId: 224
   indentLevel: 0
   storyText: She had been wearing the brooch on the night she disappeared, several
-    years before.
+    years before. They'd never found out what became of her.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
@@ -5920,9 +5879,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 223
   indentLevel: 0
-  storyText: 'You thanked him for the gift, then...
-
-'
+  storyText: As the Count pinned it to your dress you could see he was waiting for
+    your reaction.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
@@ -5944,25 +5902,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202871304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 222
+  itemId: 455
   indentLevel: 0
-  storyText: As the Count pinned the brooch to your dress, you could see he was waiting
-    for your reaction.
-  description: 
-  character: {fileID: 1173179862}
-  portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 0
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  musicClip: {fileID: 8300000, guid: f9ee213c1f752714c9e3e6e08de173f5, type: 3}
+  atTime: 0
+  loop: 1
+  fadeDuration: 1
 --- !u!114 &1202871528
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5977,7 +5925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 220
   indentLevel: 0
-  text: excused yourself for the evening
+  text: Your excused yourself, claiming you felt ill
   description: 
   targetBlock: {fileID: 1202871416}
   hideIfVisited: 0
@@ -6002,7 +5950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 219
   indentLevel: 0
-  text: tried to ply him for more information
+  text: You tried to ply him for more information
   description: 
   targetBlock: {fileID: 1202871417}
   hideIfVisited: 0
@@ -6027,7 +5975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 218
   indentLevel: 0
-  text: smiled, and changed the subject
+  text: You smiled, and thanked him for the gift.
   description: 
   targetBlock: {fileID: 1202871418}
   hideIfVisited: 0
@@ -6052,9 +6000,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 217
   indentLevel: 0
-  storyText: You had had little success in your search. The Count must have sensed
-    some of your dissatisfaction, and had given you the gift in an attempt to raise
-    your spirits.
+  storyText: You'd had little success in your search. The Count must have sensed your
+    dissatisfaction, though he couldn't know the source. He had given your brooch
+    as a gift. Something pretty to lift your spirits.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
@@ -6081,7 +6029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 216
   indentLevel: 0
-  storyText: "The brooch\u2019s design is quite particular, and you were sure you\u2019d
+  storyText: "The brooch\u2019s design was quite particular, and you were sure you\u2019d
     seen it before. But where exactly?"
   description: 
   character: {fileID: 1173179862}
@@ -6109,7 +6057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 215
   indentLevel: 0
-  storyText: A ruby brooch. The precious stone is dark, and red as wine - or blood.
+  storyText: A ruby brooch. The precious stone is as dark, and red as wine - or blood.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
@@ -6153,7 +6101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 213
   indentLevel: 0
-  storyText: You would find it, eventually.
+  storyText: It was proving elusive. But you were patient, and you had nothing but
+    time on your hands.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
@@ -6175,55 +6124,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202871304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 212
+  itemId: 454
   indentLevel: 0
-  storyText: But you had time.
-  description: 
-  character: {fileID: 1173179862}
-  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 0
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1202871537
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202871304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 211
-  indentLevel: 0
-  storyText: 'Somewhere there was at least one room that you could not reach; a room
-    with squeaky hinges that was kept secret. You had heard it that night, and many
-    nights since.
-
-'
-  description: 
-  character: {fileID: 1173179862}
-  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 0
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  musicClip: {fileID: 8300000, guid: f9ee213c1f752714c9e3e6e08de173f5, type: 3}
+  atTime: 0
+  loop: 1
+  fadeDuration: 1
 --- !u!114 &1202871538
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6238,7 +6147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 210
   indentLevel: 0
-  text: 'Out of boredom. '
+  text: because you had nothing better to do.
   description: 
   targetBlock: {fileID: 1202871413}
   hideIfVisited: 0
@@ -6263,11 +6172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 209
   indentLevel: 0
-  text: '
-
-    In search of answers.
-
-'
+  text: because you wanted answers.
   description: 
   targetBlock: {fileID: 1202871423}
   hideIfVisited: 0
@@ -6292,7 +6197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 208
   indentLevel: 0
-  text: Out of curiosity.
+  text: because you were curious.
   description: 
   targetBlock: {fileID: 1202871425}
   hideIfVisited: 0
@@ -6317,7 +6222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 206
   indentLevel: 0
-  storyText: You would find it, eventually.
+  storyText: You had decided to make finding that door your primary mission,
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
@@ -6372,8 +6277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 204
   indentLevel: 0
-  storyText: "You pick the candlestick. It\u2019s flame long since guttered out, but
-    when you lift it up you imagine you can still feel its warmth."
+  storyText: "You pick up the candlestick, it\u2019s flame long since guttered out."
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
@@ -6442,9 +6346,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 254
   indentLevel: 0
-  storyText: You let the dagger drop from nerveless fingers, and suddenly you can
-    smell it, so strong you can almost taste it, cloying as it gathers the back of
-    your throat.
+  storyText: The dagger drops from your nerveless fingers, and suddenly you can smell
+    it, so strong you can almost taste it.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
@@ -6471,8 +6374,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 253
   indentLevel: 0
-  storyText: "It\u2019s a small cut, nothing to worry about really. A droplet of blood
-    beads upon your fingertip, builds, then splashes to the floor."
+  storyText: "It\u2019s only a small cut, but a droplet of blood beads upon your fingertip,
+    builds, then splashes to the floor."
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
@@ -6499,8 +6402,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 252
   indentLevel: 0
-  storyText: The dagger has lodged deeeply in wooden floor, You have to pry it loose,
-    and in the process you manage to slice your finger.
+  storyText: You find a dagger with it's tip wedged into the wooden floor, You struggle
+    to pry it loose, and in the process manage to slice your finger.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
@@ -6545,7 +6448,7 @@ MonoBehaviour:
   itemId: 250
   indentLevel: 0
   storyText: As soon as night fell, you went down to the library, and trigged the
-    false wall.
+    hidden latch.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
@@ -6613,7 +6516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 286
   indentLevel: 0
-  storyText: 'But death comes for us all, and you are no exception. '
+  storyText: 'But death comes for us all, and you were no exception. '
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
@@ -6659,8 +6562,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 284
   indentLevel: 0
-  storyText: But it's no use. He crosses the space between you as though it were nothing,
-    and the last thing you feel is his hands wrapping around your neck.
+  storyText: But it was no use. He crossed the space between in an instant, and the
+    last thing you felt were his hands wrapping around your neck.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
@@ -6818,7 +6721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 275
   indentLevel: 0
-  text: "You kick him in the shins - it\u2019s better than nothing."
+  text: You kicked him in the shins - it was better than nothing.
   description: 
   targetBlock: {fileID: 1202871574}
   hideIfVisited: 0
@@ -6843,7 +6746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 274
   indentLevel: 0
-  text: "You plead for your life - it\u2019s worth a try."
+  text: You plead for your life - it was worth a try.
   description: 
   targetBlock: {fileID: 1202871577}
   hideIfVisited: 0
@@ -6868,7 +6771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 273
   indentLevel: 0
-  text: You back away slowly - perhaps you can buy some time.
+  text: You backed away slowly - perhaps you could buy some time.
   description: 
   targetBlock: {fileID: 1202871575}
   hideIfVisited: 0
@@ -6893,7 +6796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 272
   indentLevel: 0
-  storyText: The odds are not in your favor.
+  storyText: The odds were not in your favour.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
@@ -6920,8 +6823,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 271
   indentLevel: 0
-  storyText: Turning to face him, you try your best to look brave, and defiant. But
-    the truth is both of you know how this story is going to end.
+  storyText: Turning to face him, you tried your best to look defiant. But the truth
+    was both of you knew how this story was going to end.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
@@ -6948,8 +6851,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 270
   indentLevel: 0
-  storyText: "You hadn\u2019t heard his arrival, or his telltale footsteps on the
-    stairs. The Count is as swift, and silent as death, and just as unforgiving. "
+  storyText: "You hadn\u2019t heard the carriage's arraival, or any telltale footsteps
+    on the stairs. When he hunts the Count is as swift and silent as death, and just
+    as unforgiving. "
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
@@ -6977,7 +6881,7 @@ MonoBehaviour:
   itemId: 269
   indentLevel: 0
   storyText: "\u201CEvelyn. I believe you have something of mine.\u201D The Count
-    says behind you, his voice soft with the promise of violence."
+    said behind you, his voice soft with the promise of violence."
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
@@ -7162,7 +7066,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1155.9789
-    y: 1041.8214
+    y: 1040.536
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -7277,9 +7181,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 294
   indentLevel: 0
-  storyText: "For a moment you think can still feel fingers digging into your neck,
-    burrowing their way deeper, but no, that can\u2019t be right. You are here - wherever
-    here is, and there is no one else in sight."
+  storyText: 'Just a moment ago you were trying desperately to get away from someone,
+    or... something. But whatever it was is gone now.
+
+
+    You clutch at the memory, but it slips between your fingers like moonlight.'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -7360,7 +7266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 291
   indentLevel: 0
-  storyText: You wake up gasping, lungs burning for air.
+  storyText: You wake up, your heart pounding with fear.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -7388,7 +7294,7 @@ MonoBehaviour:
   itemId: 290
   indentLevel: 0
   storyText: With questing fingertips you feel the planes of your own face, trying
-    to remember, and slowly the memory begins to surface.
+    to remember. Slowly the memory begins to surface.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 64bb2b350b3721e4db8a4120d59107fa, type: 3}
@@ -7527,7 +7433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 331
   indentLevel: 0
-  storyText: You find yourself smiling, as you drift, weightless into the light.
+  storyText: You find yourself smiling as you drift weightless into the light.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -7776,10 +7682,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 319
   indentLevel: 0
-  storyText: "The room is suddenly suffused with a soft glow, and you find yourself
-    drifting slowly upwards. You do not resist, though it means leaving behind everything
-    you love. A part of you wishes you could have said goodbye to your family, but
-    there\u2019s no going back now."
+  storyText: The room is suddenly suffused with a soft glow, and you know the next
+    part of your journey awaits.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -7861,9 +7765,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 316
   indentLevel: 0
-  storyText: The Count lies defeated at your feet. Whatever twisted semblance of a
-    soul that he might have possessed has fled, and all that remains now is this hollow
-    shell.
+  storyText: The Count lies deafeated before you. Whatever twisted semblance of a
+    soul that he might have possessed has clearly fled, and all that remains now is
+    this hollow shell.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -7917,8 +7821,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 314
   indentLevel: 0
-  storyText: You see the face or your father, and your beloved sisters. You remember
-    Anabelle, and all you want to do is see them one last time.
+  storyText: You see the face or your father, and your beloved sisters, and all you
+    want to do is see them one last time.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -8002,8 +7906,8 @@ MonoBehaviour:
   itemId: 311
   indentLevel: 0
   storyText: "In death the Count is much reduced. He was such a presence in life,
-    always so large, and imposing. But looking at him now it\u2019s hard to imagine
-    now how you could have ever found him frightening."
+    always so large and imposing. But looking at him now it\u2019s hard to imagine
+    how you could have ever found him frightening."
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -8116,7 +8020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 307
   indentLevel: 0
-  storyText: It is a fitting end, if there ever was one.
+  storyText: It is a fitting end.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -8143,8 +8047,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 306
   indentLevel: 0
-  storyText: "You\u2019ve won. At last the Count lies before you, dead. Just one more
-    soul, sacrificed upon this bloody altar."
+  storyText: "You\u2019ve won. At last the Count lies dead before you Just one more
+    soul sacrificed upon this bloody altar."
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -8226,8 +8130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 303
   indentLevel: 0
-  storyText: 'Perhaps sensing your presence, the Count turns, his eyes widening as
-    he catches sight of your ghostly visage.
+  storyText: 'Perhaps sensing your presence, he turns, his eyes widening as he catches
+    sight of your ghostly visage.
 
 '
   description: 
@@ -8256,9 +8160,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 302
   indentLevel: 0
-  storyText: However long you have wandered through these shadowy halls, it seems
-    mere moments have passed in the land of the living. The Count still stands above
-    your cooling corpse, gazing down with an expression that almost resembles regret.
+  storyText: "However long you have wandered through these shadowy halls, it seems
+    mere moments have passed in the land of the living. \n\nThe Count still stands
+    above your cooling corpse, gazing down with an expression that almost resembles
+    regret."
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -8285,8 +8190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 301
   indentLevel: 0
-  storyText: So, you are dead, and yet some part of you still lingers. And here you
-    find yourself once more, trapped in the bloody chamber, with no way out.
+  storyText: "So, you died, and yet some part of you still lingers. \n\nAnd once again
+    you find yourself trapped in the bloody chamber, with no way out."
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -8315,7 +8220,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1338.0035
     y: 1444.1945
-    width: 165.66257
+    width: 168.81187
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8324,6 +8229,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1202871518}
   - {fileID: 1202871601}
   - {fileID: 1202871600}
   - {fileID: 1202871599}
@@ -8348,7 +8254,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1334.2772
     y: 1354.3629
-    width: 168.0722
+    width: 171.28712
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8357,6 +8263,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1202871478}
   - {fileID: 1202871611}
   - {fileID: 1202871610}
   - {fileID: 1202871609}
@@ -8380,7 +8287,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1317.9559
     y: 1400.1255
-    width: 201.80713
+    width: 205.94058
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8389,6 +8296,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1202871527}
   - {fileID: 1202871606}
   - {fileID: 1202871605}
   - {fileID: 1202871604}
@@ -8412,14 +8320,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1146.0256
+    x: 1131.8862
     y: 1217.8923
-    width: 159.63849
+    width: 167.57425
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 297
-  blockName: Final Confrontaion
+  blockName: Final Confrontation
   description: 
   eventHandler: {fileID: 0}
   commandList:
@@ -8428,9 +8336,9 @@ MonoBehaviour:
   - {fileID: 1202871614}
   - {fileID: 1202871613}
   - {fileID: 1202871612}
-  - {fileID: 1202871644}
+  - {fileID: 1202871692}
   - {fileID: 1202871696}
-  - {fileID: 1202871695}
+  - {fileID: 1202871364}
 --- !u!114 &1202871621
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8688,8 +8596,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 345
   indentLevel: 0
-  storyText: The bookshelf swung open, inviting you closer, and as you slid the tiny
-    key into the lock, you found yourself holding your breath.
+  storyText: The bookshelf swung open invitingly, and as you slid the tiny key into
+    the lock you found yourself holding your breath.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 7341bb12050fc09458c54c0104915495, type: 3}
@@ -8727,6 +8635,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1202871634}
   commandList:
+  - {fileID: 1202871536}
   - {fileID: 1202871641}
   - {fileID: 1202871645}
 --- !u!114 &1202871633
@@ -8771,9 +8680,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 373
   indentLevel: 0
-  storyText: "You chose to run. In life you couldn\u2019t escape the Count but in
-    death you you have far more resources at your disposal. You burst through the
-    doorway, leaving the house and its horrors in your wake."
+  storyText: "In life you couldn\u2019t escape the Count, but in death you have far
+    more resources at your disposal. \n\nYou burst through the doorway, leaving the
+    house and its horrors in your wake."
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -8847,36 +8756,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 452
   indentLevel: 0
-  storyText: Somewhere there was at least one room that you could not reach; a room
-    with squeaky hinges that was kept secret. You had heard it that night, and many
-    nights since.
-  description: 
-  character: {fileID: 1173179862}
-  portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 0
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1202871640
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202871304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 451
-  indentLevel: 0
-  storyText: But you had time.
+  storyText: "Somewhere there was at least one room that you could not reach; a secret
+    room with a creaking door. \n\nYou had heard it that night, and many nights since."
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
@@ -8903,8 +8784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 380
   indentLevel: 0
-  storyText: "So you chose to run. \n\nWell, as they say. \"He who fights and runs
-    away, lives to fight another day\""
+  storyText: So you chose to run.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -8933,7 +8813,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1030.8849
     y: 1433.5312
-    width: 160.8433
+    width: 163.86139
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8944,7 +8824,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 1202871635}
   - {fileID: 1202871701}
-  - {fileID: 1202871702}
   - {fileID: 1202871703}
   - {fileID: 1202871625}
 --- !u!114 &1202871643
@@ -8962,7 +8841,8 @@ MonoBehaviour:
   itemId: 450
   indentLevel: 0
   storyText: 'At night, free from the spying eyes of the servants, you explored your
-    new home. Searching every room, hallway, and dusty attic became familiar to you. '
+    new home by candlelight. Every room, hallway, and dusty attic became familiar
+    to you. '
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
@@ -8975,36 +8855,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1202871644
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202871304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c6dd8d3a780f4d1ea772e3daf10c372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 453
-  indentLevel: 0
-  targetObjects:
-  - {fileID: 1385252257}
-  tweenType: 2
-  waitUntilFinished:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  duration:
-    floatRef: {fileID: 0}
-    floatVal: 0.5
-  fadeMode: 0
-  targetColor:
-    colorRef: {fileID: 0}
-    colorVal: {r: 1, g: 1, b: 1, a: 1}
-  targetAlpha:
-    floatRef: {fileID: 0}
-    floatVal: 0
 --- !u!114 &1202871645
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10153,7 +10003,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1179.2795
     y: 1277.0378
-    width: 120
+    width: 120.544556
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10234,9 +10084,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1193.5417
+    x: 1205.17
     y: 1515.6621
-    width: 120
+    width: 120.544556
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10247,6 +10097,36 @@ MonoBehaviour:
   commandList:
   - {fileID: 1202871554}
   - {fileID: 1202871690}
+--- !u!114 &1202871692
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6dd8d3a780f4d1ea772e3daf10c372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 393
+  indentLevel: 0
+  targetObjects:
+  - {fileID: 1385252257}
+  tweenType: 2
+  waitUntilFinished:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  duration:
+    floatRef: {fileID: 0}
+    floatVal: 0.5
+  fadeMode: 0
+  targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  targetAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 0
 --- !u!114 &1202871693
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10298,21 +10178,6 @@ MonoBehaviour:
   targetAlpha:
     floatRef: {fileID: 0}
     floatVal: 1
---- !u!114 &1202871695
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202871304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 443c1ab2b500b374b847cf5563af130e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 390
-  indentLevel: 0
-  typeOfFinish: 0
 --- !u!114 &1202871696
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10430,7 +10295,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 818.81665
     y: 1479.363
-    width: 131.92766
+    width: 134.15842
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10458,34 +10323,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 442
   indentLevel: 0
-  storyText: Light surrounds you, warming your face.
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1202871702
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202871304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 441
-  indentLevel: 0
-  storyText: "When you feel yourself being lifted upwards, you don\u2019t resist. "
+  storyText: "You surroundings fall away, replaced by a soft light. When you feel
+    yourself being lifted gently upwards you don\u2019t resist. "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -10512,7 +10351,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 440
   indentLevel: 0
-  storyText: Whoever said that death was the end?
+  storyText: 'Whoever said that death was the end? There is so much more out there...
+
+
+    At last you are free.'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
