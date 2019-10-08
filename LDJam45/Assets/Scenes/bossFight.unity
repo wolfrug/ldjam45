@@ -11829,15 +11829,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 10.52
       objectReference: {fileID: 0}
-    - target: {fileID: 5520668267926802238, guid: ef6a9ed7a4b243c4da73879fb34bc2da,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.25
-      objectReference: {fileID: 0}
     - target: {fileID: 5520668267504626900, guid: ef6a9ed7a4b243c4da73879fb34bc2da,
         type: 3}
       propertyPath: m_TagString
       value: TheCount
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520668267926802238, guid: ef6a9ed7a4b243c4da73879fb34bc2da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.25
       objectReference: {fileID: 0}
     - target: {fileID: 5520668267504626897, guid: ef6a9ed7a4b243c4da73879fb34bc2da,
         type: 3}
@@ -12112,6 +12112,66 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FillAmount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091237513280482390, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
+        type: 3}
+      propertyPath: triggerEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091237513280482390, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
+        type: 3}
+      propertyPath: triggerEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091237513280482390, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
+        type: 3}
+      propertyPath: triggerEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091237513280482390, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
+        type: 3}
+      propertyPath: triggerEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 849267508}
+    - target: {fileID: 5091237513280482390, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
+        type: 3}
+      propertyPath: triggerEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091237513280482390, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
+        type: 3}
+      propertyPath: triggerEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091237513280482390, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
+        type: 3}
+      propertyPath: triggerEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091237513280482390, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
+        type: 3}
+      propertyPath: triggerEntered.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091237513280482390, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
+        type: 3}
+      propertyPath: triggerEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2127626789}
+    - target: {fileID: 5091237513280482390, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
+        type: 3}
+      propertyPath: triggerEntered.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091237513280482390, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
+        type: 3}
+      propertyPath: triggerEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091237513280482390, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
+        type: 3}
+      propertyPath: triggerEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8242098507238358670, guid: 119a54f7f2fe0fe44b47bb0a7909c59c,
         type: 3}
