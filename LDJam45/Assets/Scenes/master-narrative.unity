@@ -750,7 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 81.24415, y: 61.721832}
+  scrollPos: {x: -384.10236, y: -875.15845}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -762,9 +762,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1202871310}
-  selectedCommands:
-  - {fileID: 1202871578}
+  - {fileID: 1202871642}
+  selectedCommands: []
   variables:
   - {fileID: 1202871689}
   - {fileID: 1202871637}
@@ -8106,8 +8105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 305
   indentLevel: 0
-  storyText: Will you run, and try to escape this hateful place? Or will you confront
-    your tormentor?
+  storyText: "Will you try to escape this hateful place by ascending the chandeliers?
+    \n\nOr will you choose to stride forward and confront your tormentor?"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
