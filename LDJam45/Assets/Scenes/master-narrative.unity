@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 1202871527}
   - component: {fileID: 1202871518}
   - component: {fileID: 1202871478}
+  - component: {fileID: 1202871537}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -749,7 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -231.87346, y: -1151.1503}
+  scrollPos: {x: 81.24415, y: 61.721832}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -760,8 +761,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1202871310}
+  selectedCommands:
+  - {fileID: 1202871578}
   variables:
   - {fileID: 1202871689}
   - {fileID: 1202871637}
@@ -861,7 +864,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 371.14554
     y: 155.31558
-    width: 120.544556
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1155,7 +1158,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 228.2697
     y: 212.66312
-    width: 135.39603
+    width: 121.78217
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1758,7 +1761,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 245.10736
-    y: 1171.5209
+    y: 1172.7585
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1772,6 +1775,7 @@ MonoBehaviour:
   - {fileID: 1202871432}
   - {fileID: 1202871431}
   - {fileID: 1202871430}
+  - {fileID: 1202871537}
   - {fileID: 1202871429}
   - {fileID: 1202871428}
   - {fileID: 1202871427}
@@ -1842,8 +1846,8 @@ MonoBehaviour:
   - {fileID: 1202871394}
   - {fileID: 1202871393}
   - {fileID: 1202871391}
-  - {fileID: 1202871386}
   - {fileID: 1202871385}
+  - {fileID: 1202871386}
   - {fileID: 1202871390}
   - {fileID: 1202871389}
   - {fileID: 1202871388}
@@ -2474,8 +2478,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 87
   indentLevel: 0
-  storyText: As the carriage rattled onwards you pressed the flower to your breast,
-    and breathed in its sweet perfume. A piece of home.
+  storyText: Once they were out of sight you pressed the flower to your breast, and
+    breathed in its sweet perfume. A piece of home.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
@@ -2665,7 +2669,7 @@ MonoBehaviour:
   itemId: 80
   indentLevel: 0
   storyText: You were still clutching the flower tightly when you stepped up into
-    carriage the Count had sent to collect you.
+    the carriage the Count had sent to collect you.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 86225c9e9ef462a449f3bacc9e7a2c84, type: 3}
@@ -3660,7 +3664,8 @@ MonoBehaviour:
   itemId: 197
   indentLevel: 0
   storyText: Downstairs you heard the quiet padding of his footsteps, and then the
-    faint squeal of unoiled hinges as a door swung open somewhere within the house.
+    faint squeal of unoiled hinges as a door swung open somewhere deep within the
+    house.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
@@ -3688,8 +3693,8 @@ MonoBehaviour:
   itemId: 196
   indentLevel: 0
   storyText: For a moment you thought you saw the sack move, as though whatever it
-    contained were alive. But before you could get a second look, the Count had disappeared
-    into the house with his burden.
+    contained were alive. But before you could get a second look, he'd disappeared
+    into the house and out of sight.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
@@ -3716,10 +3721,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 195
   indentLevel: 0
-  storyText: 'A sound had awoken you, and you''d gone to the window to see what it
-    was. The Count''s carriage had pulled up outside the front doors. It was too dark
-    to see clearly, but you saw him pulling a long, heavy sack from the interior of
-    the carriage. '
+  storyText: It was just past midnight, and a sound had startled you awake. You'd
+    gone to the window to investigate, and had seen the Count's carriage pulled up
+    before the house. What was he doing travelling so late?
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
@@ -3746,7 +3750,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 194
   indentLevel: 0
-  storyText: Often you would fall asleep while reading, and that night was no exception.
+  storyText: ' You''d always loved stories, and you often used to fall asleep while
+    reading. That night was no exception.'
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
@@ -3774,7 +3779,7 @@ MonoBehaviour:
   itemId: 193
   indentLevel: 0
   storyText: A book lies discarded on the floor, the pages well thumbed and spotted
-    with age. You'd always loved stories.
+    with age.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
@@ -5074,10 +5079,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 130
   indentLevel: 0
-  storyText: The first few weeks in your new home dragged by. You had grown up in
-    a large family, constantly surrounded by noise, and movement. Adjusting to isolation
-    of your new existence had proven to be difficult. Time stretched out before you,
-    endless, and unforgiving.
+  storyText: The first few weeks in your new home passed slowly. You had grown up
+    in a large family, constantly surrounded by noise, and movement. Adjusting to
+    isolation of your new existence had proven to be difficult.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
@@ -5105,8 +5109,8 @@ MonoBehaviour:
   itemId: 129
   indentLevel: 0
   storyText: "You remember now. The Count gave you this pocket watch as a welcoming
-    gift. \n\nYou brush your fingertips across the letters. E. K. - your initials.
-    If only you could remember what they stood for."
+    gift. \n\nE. K. - those are your initials. If only you could remember what they
+    stood for."
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
@@ -5161,7 +5165,7 @@ MonoBehaviour:
   itemId: 127
   indentLevel: 0
   storyText: "You follow the faint sound of ticking to its source, and find an ornate
-    pocket watch, with someone\u2019s initials etched onto the back."
+    pocket watch with someone\u2019s initials etched onto the back."
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: e54672b28f414de4aba7a32726da0e61, type: 3}
@@ -5309,9 +5313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 259
   indentLevel: 0
-  storyText: '
-
-    The scent of iron. The scent of blood.'
+  storyText: ' The scent of iron. The scent of blood.'
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
@@ -5544,7 +5546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 236
   indentLevel: 0
-  storyText: The Count drew forth a small key from his pocket, and unloacked the door.
+  storyText: The Count drew forth a small key from his pocket, and unlocked the door.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
@@ -5722,9 +5724,9 @@ MonoBehaviour:
   itemId: 229
   indentLevel: 0
   storyText: "You\u2019d grown accustomed to the Count's comings and goings, and so
-    when you heard the clatter of the carriage outside just after midnight, you were
-    ready. \n\nYou waited in the shadows at the back of the stairs, and followed him
-    as he made his way down the hall, his mystery burden slung across one shoulder. "
+    you were ready when you heard the clatter of the carriage outside just after midnight.\n\nYou
+    waited in the shadows at the back of the stairs, and followed him as he made his
+    way down the hall, his mystery burden slung across one shoulder. "
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9fff447354c656f409db9b8969ffe561, type: 3}
@@ -6057,7 +6059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 215
   indentLevel: 0
-  storyText: A ruby brooch. The precious stone is as dark, and red as wine - or blood.
+  storyText: A ruby brooch. The precious stone is as dark and red as wine - or blood.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 6adff898a91bc6c49a7c8ef5fee69664, type: 3}
@@ -6133,6 +6135,34 @@ MonoBehaviour:
   atTime: 0
   loop: 1
   fadeDuration: 1
+--- !u!114 &1202871537
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202871304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 458
+  indentLevel: 0
+  storyText: 'It was too dark to see clearly, but you saw him pulling a long, heavy
+    sack from the interior of the carriage. '
+  description: 
+  character: {fileID: 1173179862}
+  portrait: {fileID: 21300000, guid: aef7659596ba5204ca1129ef224f2f62, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &1202871538
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6277,7 +6307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 204
   indentLevel: 0
-  storyText: "You pick up the candlestick, it\u2019s flame long since guttered out."
+  storyText: "You pick up a candlestick, it\u2019s flame long since guttered out."
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 9201cd6379d6e9c478416af00f441cf4, type: 3}
@@ -6346,8 +6376,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 254
   indentLevel: 0
-  storyText: The dagger drops from your nerveless fingers, and suddenly you can smell
-    it, so strong you can almost taste it.
+  storyText: 'The dagger drops from your nerveless fingers, and suddenly you can smell
+    it all around you.
+
+'
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: 461a77cddec644347a1c1ca182f75f17, type: 3}
@@ -6402,7 +6434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 252
   indentLevel: 0
-  storyText: You find a dagger with it's tip wedged into the wooden floor, You struggle
+  storyText: You find a dagger with its tip wedged into the wooden floor. You struggle
     to pry it loose, and in the process manage to slice your finger.
   description: 
   character: {fileID: 1173179862}
@@ -6562,8 +6594,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 284
   indentLevel: 0
-  storyText: But it was no use. He crossed the space between in an instant, and the
-    last thing you felt were his hands wrapping around your neck.
+  storyText: But it was no use. He crossed the space between you in an instant, and
+    the last thing you felt were his hands wrapping around your neck.
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
@@ -6851,9 +6883,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 270
   indentLevel: 0
-  storyText: "You hadn\u2019t heard the carriage's arraival, or any telltale footsteps
-    on the stairs. When he hunts the Count is as swift and silent as death, and just
-    as unforgiving. "
+  storyText: "You hadn\u2019t heard the arrival of the carrige, or any telltale footsteps
+    on the stairs. The Count is as swift and silent as death, and just as unforgiving. "
   description: 
   character: {fileID: 1173179862}
   portrait: {fileID: 21300000, guid: fdfa2461db13a4546b4e3643ba8418d1, type: 3}
@@ -8047,7 +8078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 306
   indentLevel: 0
-  storyText: "You\u2019ve won. At last the Count lies dead before you Just one more
+  storyText: "You\u2019ve won. At last the Count lies dead before you. Just one more
     soul sacrificed upon this bloody altar."
   description: 
   character: {fileID: 0}
@@ -8220,7 +8251,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1338.0035
     y: 1444.1945
-    width: 168.81187
+    width: 154.5792
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8254,7 +8285,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1334.2772
     y: 1354.3629
-    width: 171.28712
+    width: 157.67326
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8287,7 +8318,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1317.9559
     y: 1400.1255
-    width: 205.94058
+    width: 186.13861
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8322,7 +8353,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1131.8862
     y: 1217.8923
-    width: 167.57425
+    width: 153.96039
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8813,7 +8844,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1030.8849
     y: 1433.5312
-    width: 163.86139
+    width: 149.00989
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10003,7 +10034,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1179.2795
     y: 1277.0378
-    width: 120.544556
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10086,7 +10117,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1205.17
     y: 1515.6621
-    width: 120.544556
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10295,7 +10326,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 818.81665
     y: 1479.363
-    width: 134.15842
+    width: 124.876236
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
